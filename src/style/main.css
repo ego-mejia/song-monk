@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2509803922);
+}
+.navbar__img img {
+  width: 150px;
+}
+.navbar__links {
+  position: relative;
+  left: 5%;
+  display: flex;
+  gap: 20px;
+}
+.navbar a {
+  cursor: pointer;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #E55117;
+}/*# sourceMappingURL=main.css.map */
