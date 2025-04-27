@@ -1,0 +1,50 @@
+const songs = [
+  { title: "Flowers", artist: "Miley Cyrus", album: "Endless Summer Vacation" },
+  {
+    title: "Where the Wild Things Are",
+    artist: "Luke Combs",
+    album: "Gettin' Old",
+  },
+  {
+    title: "Everybody",
+    artist: "Nicki Minaj feat. Lil Uzi Vert",
+    album: "Pink Friday 2",
+  },
+  { title: "I Am Not Okay", artist: "Jelly Roll", album: "Whitsitt Chapel" },
+  {
+    title: "Good Good",
+    artist: "Usher, Summer Walker & 21 Savage",
+    album: "Coming Home",
+  },
+  {
+    title: "Monaco",
+    artist: "Bad Bunny",
+    album: "Nadie Sabe Lo Que Va a Pasar Mañana",
+  },
+  { title: "White Horse", artist: "Chris Stapleton", album: "Traveller" },
+  { title: "Lil Boo Thang", artist: "Paul Russell", album: "Single" },
+  { title: "Act II: Date @ 8", artist: "4Batz & Drake", album: "Single" },
+  {
+    title: "High Road",
+    artist: "Koe Wetzel feat. Jessie Murph",
+    album: "Single",
+  },
+  { title: "Burn It Down", artist: "Parker McCollum", album: "Single" },
+  { title: "FukUMean", artist: "Gunna", album: "A Gift & a Curse" },
+  { title: "Taste", artist: "Sabrina Carpenter", album: "Emails I Can't Send" },
+  {
+    title: "Where It Ends",
+    artist: "Bailey Zimmerman",
+    album: "Religiously. The Album",
+  },
+  { title: "Yes, And?", artist: "Ariana Grande", album: "Eternal Sunshine" },
+  { title: "On My Mama", artist: "Victoria Monét", album: "Jaguar II" },
+  { title: "Exes", artist: "Tate McRae", album: "Single" },
+  { title: "Wind Up Missin' You", artist: "Tucker Wetmore", album: "Single" },
+  {
+    title: "Fe!n",
+    artist: "Travis Scott feat. Playboi Carti",
+    album: "UTOPIA",
+  },
+  { title: "The Painter", artist: "Cody Johnson", album: "Leather" },
+];
