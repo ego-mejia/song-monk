@@ -14,10 +14,11 @@
 
 .navbar {
   display: flex;
-  position: relative;
+  position: static;
   padding: 10px;
   align-items: center;
   width: 100%;
+  background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2509803922);
 }
 .navbar__img img {
@@ -35,4 +36,36 @@
 }
 .navbar a:hover {
   color: #E55117;
+}
+
+.songs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 20px 20px;
+  gap: 1rem;
+  background-color: white;
+}
+.songs__card {
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  transition: transform 0.08s ease-in;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+}
+.songs__card:hover {
+  transform: translateY(-5px);
+}
+
+.App {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+}
+.App__title {
+  padding: 20px 20px 0px;
+  font-family: "Bangers", system-ui;
+  font-style: normal;
+  font-size: 30px;
 }/*# sourceMappingURL=main.css.map */

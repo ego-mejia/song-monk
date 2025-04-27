@@ -1,4 +1,4 @@
-const songs = [
+export const songs = [
   { title: "Flowers", artist: "Miley Cyrus", album: "Endless Summer Vacation" },
   {
     title: "Where the Wild Things Are",
@@ -13,7 +13,7 @@ const songs = [
   { title: "I Am Not Okay", artist: "Jelly Roll", album: "Whitsitt Chapel" },
   {
     title: "Good Good",
-    artist: "Usher, Summer Walker & 21 Savage",
+    artist: "Usher",
     album: "Coming Home",
   },
   {

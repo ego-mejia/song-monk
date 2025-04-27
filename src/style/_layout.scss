@@ -1,0 +1,17 @@
+.App{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+    position: relative;
+    &__title{
+        padding: 20px 20px 0px;
+
+        // Font
+        font-family: "Bangers", system-ui;
+        // font-weight: 400;
+        font-style: normal;
+
+        font-size: 30px;
+    }
+}
