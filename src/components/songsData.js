@@ -1,4 +1,4 @@
-export const songs = [
+export const songsList = [
   { title: "Flowers", artist: "Miley Cyrus", album: "Endless Summer Vacation" },
   {
     title: "Where the Wild Things Are",
