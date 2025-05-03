@@ -10,9 +10,17 @@
             border-radius: 5px;
             transition: transform 0.08s ease-in;
             box-shadow: 0px 4px 10px #00000040;
-            cursor: pointer;
+            // cursor: pointer;
             &:hover{
                 transform: translateY(-5px);
+            }
+            & button{
+                cursor: pointer;
+                padding: 10px;
+                background-color: orange;
+                font-weight: bold;
+                border-radius: 5px;
+                margin-top: 20px;
             }
     }
 }

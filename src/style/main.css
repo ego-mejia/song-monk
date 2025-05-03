@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,35 @@
 * a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  font-family: "Bangers", system-ui;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.App {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+}
+.App__title {
+  padding: 20px 20px 0px;
+}
+
+.Library {
+  top: 70px;
+  left: 20px; /* ajusta según tu layout */
+  max-height: calc(100vh - 90px); /* altura dinámica según viewport */
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  /* opcional: oculta scroll horizontal */
+  overflow-x: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
 }
 
 .navbar {
@@ -51,21 +81,15 @@
   border-radius: 5px;
   transition: transform 0.08s ease-in;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2509803922);
-  cursor: pointer;
 }
 .songs__card:hover {
   transform: translateY(-5px);
 }
-
-.App {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  position: relative;
-}
-.App__title {
-  padding: 20px 20px 0px;
-  font-family: "Bangers", system-ui;
-  font-style: normal;
-  font-size: 30px;
+.songs__card button {
+  cursor: pointer;
+  padding: 10px;
+  background-color: orange;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */

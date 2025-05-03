@@ -1,3 +1,9 @@
+h1{
+    // Font
+    font-family: "Bangers", system-ui;
+    font-style: normal;
+    font-size: 50px;
+}
 .App{
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -7,11 +13,37 @@
     &__title{
         padding: 20px 20px 0px;
 
-        // Font
-        font-family: "Bangers", system-ui;
-        // font-weight: 400;
-        font-style: normal;
 
-        font-size: 30px;
     }
 }
+
+
+// .Library{
+//     position: absolute;
+//     background-color: white;
+//     border-radius: 20px;
+//     padding: 20px;
+//     top: 70px;
+//     overflow-y: auto;
+//     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    
+// }
+
+.Library {
+    // position: absolute;
+    top: 70px;
+    left: 20px;          /* ajusta según tu layout */
+    // right: 20px;         /* para que ocupe el ancho deseado */
+    max-height: calc(100vh - 90px); /* altura dinámica según viewport */
+    
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+  
+    overflow-y: auto;
+    /* opcional: oculta scroll horizontal */
+    overflow-x: hidden;
+  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+  }
+  
