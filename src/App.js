@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import Songs from "./components/Songs";
+import Songs from "./components/SearchResults";
 import { songsList } from "./components/songsData";
 
 import "./style/main.css";
