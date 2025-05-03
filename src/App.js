@@ -6,6 +6,15 @@ import { songsList } from "./components/songsData";
 import "./style/main.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      allSongs: songsList,
+      librarySongs: songsList.slice(0, Math.floor(songsList.length / 2)),
+    };
+  }
+
   componentDidMount() {
     console.log("La app está lista para Monkear!🤘");
   }
@@ -16,7 +25,7 @@ class App extends Component {
         <div className="App__title">
           <h1>Ponte Monk!</h1>
         </div>
-        <Songs songsList={songsList} />
+        <Songs songsList={this.state.allSongs} />
       </div>
     );
   }
