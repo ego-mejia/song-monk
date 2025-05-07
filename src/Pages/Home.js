@@ -4,10 +4,7 @@ import Library from "../components/Library";
 import SearchResults from "../components/SearchResults";
 
 // * Renderizar componente padre
-const Home = ({ allSongs, loading, error }) => {
-  const [librarySongs, setLibrarySongs] = useState([]);
-  // Renderizar Datos con el Hook
-
+const Home = ({ allSongs, loading, error, librarySongs, setLibrarySongs }) => {
   // Función para agregar canciones a la biblioteca
   const handleAddToLibrary = (song) => {
     // Evita duplicados

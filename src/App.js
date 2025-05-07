@@ -10,20 +10,21 @@ import useFetch from "./hooks/useFetch";
 import { songsList } from "./components/songsData";
 
 const App = () => {
+  // * Manejar los datos en el componente padre
   const { allSongs, loading, error } = useFetch(songsList);
-
+  const [librarySongs, setLibrarySongs] = useState([]);
   /*
-* Buscar Album por artista
-https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
+  * Buscar Album por artista
+  https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
 
-ej. artist_name=oasis
+  ej. artist_name=oasis
 
-* Detalles de Album específico
-https://theaudiodb.com/api/v1/json/2/album.php?m=id_album
-ej. "Definitely Maybe" (ID: 2115888)
+  * Detalles de Album específico
+  https://theaudiodb.com/api/v1/json/2/album.php?m=id_album
+  ej. "Definitely Maybe" (ID: 2115888)
 
-Documentación API
-https://www.theaudiodb.com/free_music_api
+  Documentación API
+  https://www.theaudiodb.com/free_music_api
 */
 
   /*
@@ -34,14 +35,18 @@ https://www.theaudiodb.com/free_music_api
   return (
     <div className="App">
       <Header />
-      {/* <SearchResults songList={allSongs} onAddToLibrary={handleAddToLibrary} /> */}
-      {/* <div className="Library"> */}
-      {/* <Library songList={library} /> */}
-      {/* </div> */}
       <Routes>
         <Route
           path="/"
-          element={<Home allSongs={allSongs} loading={loading} error={error} />}
+          element={
+            <Home
+              allSongs={allSongs}
+              loading={loading}
+              error={error}
+              librarySongs={librarySongs}
+              setLibrarySongs={setLibrarySongs}
+            />
+          }
         />
         {/* <Route path="/song" element={<Song />} /> */}
       </Routes>
