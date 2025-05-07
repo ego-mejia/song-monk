@@ -13,31 +13,13 @@ const App = () => {
   // * Manejar los datos en el componente padre
 
   const [formData, setFormData] = useState({
-    search: "oasis",
+    search: "119231", //Esto es ACDC
   });
   const { fetchedAlbums, loading, error } = useFetchAlbumsByArtist(
     formData.search
   );
   const [librarySongs, setLibrarySongs] = useState([]);
-  /*
-  * Buscar Album por artista
-  https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
 
-  ej. artist_name=oasis
-
-  * Detalles de Album específico
-  https://theaudiodb.com/api/v1/json/2/album.php?m=id_album
-  ej. "Definitely Maybe" (ID: 2115888)
-
-  Documentación API
-  https://www.theaudiodb.com/free_music_api
-*/
-
-  /*
-  TODO: Define dos rutas principales
-  TODO: /: Página principal que mostrará los resultados de búsqueda. 
-  TODO: /song/:id: Página que mostrará los detalles de una canción específica.
-   */
   return (
     <div className="App">
       <Header />

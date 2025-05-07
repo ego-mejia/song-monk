@@ -28,7 +28,7 @@ export const artistList = [
 /*
 * ENDPOINTS
 Artist Data: https://www.theaudiodb.com/api/v1/json/2/artist.php?i={idArtist}
-All Albums for artist: www.theaudiodb.com/api/v1/json/2/album.php?i={idArtist}
+All Albums for artist: https://www.theaudiodb.com/api/v1/json/2/album.php?i={idArtist}
 
 Individual Album information: https://www.theaudiodb.com/api/v1/json/2/album.php?m={idAlbum}
 "idAlbum":"2109569"

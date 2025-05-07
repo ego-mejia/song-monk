@@ -6,6 +6,7 @@ import SearchBar from "../components/SearchBar";
 // Lista de Artistas
 import { artistList } from "../components/ArtistData";
 import Artists from "../components/Artists";
+import SearchedAlbums from "../components/SearchedAlbums";
 // * Renderizar componente padre
 const Home = ({
   fetchedAlbums,
@@ -46,10 +47,10 @@ const Home = ({
       {error ? (
         <p>{error}</p>
       ) : (
-        <p>Data importada correctamente</p>
+        <p>Test</p>
         // ! Este componente renderiza los Albums, canciones, etc
         // TODO: pendiente de corregir.
-
+        // <SearchedAlbums albumsList={fetchedAlbums} />
         // <SearchResults
         //   albumList={fetchedAlbums}
         //   onAddToLibrary={handleAddToLibrary}
