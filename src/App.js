@@ -1,12 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Header from "./components/Header";
-// import SearchResults from "./components/SearchResults";
-// import Library from "./components/Library";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
 import "./style/main.css";
+// Components
+import Header from "./components/Header";
+import Home from "./Pages/Home";
+import SongDetails from "./Pages/SongDetails";
+// Hooks
 import useFetch from "./hooks/useFetch";
-// import Song from "./components/Song";
+// Data
 import { songsList } from "./components/songsData";
 
 const App = () => {
@@ -48,7 +49,7 @@ const App = () => {
             />
           }
         />
-        {/* <Route path="/song" element={<Song />} /> */}
+        <Route path="/song" element={<SongDetails />} />
       </Routes>
     </div>
   );
