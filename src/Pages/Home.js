@@ -16,13 +16,20 @@ const Home = ({ allSongs, loading, error, librarySongs, setLibrarySongs }) => {
       setLibrarySongs([...librarySongs, song]);
     }
   };
-
+  //TODO: agregar render condicional al componente de SearchResults en caso de no errores.
   return (
     <>
       <h1>Library</h1>
       <Library songList={librarySongs} />
       <h1>Home screen</h1>
-      <SearchResults songList={allSongs} onAddToLibrary={handleAddToLibrary} />
+      {error ? (
+        <p>{error}</p>
+      ) : (
+        <SearchResults
+          songList={allSongs}
+          onAddToLibrary={handleAddToLibrary}
+        />
+      )}
     </>
   );
 };
