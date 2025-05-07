@@ -8,7 +8,7 @@ import SongDetails from "./Pages/SongDetails";
 // Hooks
 import useFetch from "./hooks/useFetch";
 // Data
-import { songsList } from "./components/songsData";
+import { songsList } from "./components/SongsData";
 
 const App = () => {
   // * Manejar los datos en el componente padre

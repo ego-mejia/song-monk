@@ -1,6 +1,6 @@
 // Crea un componente de clase que muestra un encabezado con el título de la app.
 import React from "react";
-import logo from "../assets/logo-large.svg";
+import logo from "../../assets/logo-large.svg";
 
 const Header = () => {
   return (
