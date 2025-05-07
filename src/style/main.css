@@ -113,8 +113,40 @@ h1 {
 .artists {
   margin-bottom: 20px;
 }
-.artists__grid {
+.artists__container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  gap: 1rem;
+}
+.artists__track {
+  display: flex; /* pone todos .artist__card en fila */
+  animation: scroll-right 60s linear infinite;
+}
+.artists__card {
+  display: flex;
+  gap: 5px;
+  background-color: whitesmoke;
+  padding: 10px;
+  flex: 0 0 auto; /* que cada card conserve su ancho */
+  margin-right: 1rem; /* separación opcional */
+}
+.artists__card p:first-child {
+  font-weight: bold;
+}
+
+.albums {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+}
+
+/* Animación: de start (0) a finish (-50% del ancho total) */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  } /* empieza desplazado media pista */
+  100% {
+    transform: translateX(0);
+  } /* termina en posición inicial */
 }/*# sourceMappingURL=main.css.map */

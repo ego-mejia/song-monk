@@ -28,7 +28,7 @@ const App = () => {
           path="/"
           element={
             <Home
-              fetchedAlbum={fetchedAlbums}
+              albumsList={fetchedAlbums}
               loading={loading}
               error={error}
               librarySongs={librarySongs}

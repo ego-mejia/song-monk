@@ -9,7 +9,7 @@ import Artists from "../components/Artists";
 import SearchedAlbums from "../components/SearchedAlbums";
 // * Renderizar componente padre
 const Home = ({
-  fetchedAlbums,
+  albumsList,
   loading,
   error,
   librarySongs,
@@ -38,8 +38,11 @@ const Home = ({
 
       <section className="artists">
         <h3>Artistas</h3>
-        <div className="artists__grid">
-          <Artists artistList={artistList} />
+        <div className="artists__container">
+          <div className="artists__track">
+            <Artists artistList={artistList} />
+            <Artists artistList={artistList} />
+          </div>
         </div>
       </section>
 
@@ -47,10 +50,10 @@ const Home = ({
       {error ? (
         <p>{error}</p>
       ) : (
-        <p>Test</p>
+        // <p>Test</p>
         // ! Este componente renderiza los Albums, canciones, etc
         // TODO: pendiente de corregir.
-        // <SearchedAlbums albumsList={fetchedAlbums} />
+        <SearchedAlbums albumsList={albumsList} />
         // <SearchResults
         //   albumList={fetchedAlbums}
         //   onAddToLibrary={handleAddToLibrary}

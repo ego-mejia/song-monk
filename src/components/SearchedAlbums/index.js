@@ -16,15 +16,16 @@ const SearchedAlbums = ({ albumsList }) => {
           (
             { strAlbum3DThumb, intYearReleased, strAlbum, idAlbum, strArtist },
             index
-          ) => (
-            <div className="albums__card" key={index}>
-              <img src={strAlbum3DThumb} alt="Album image" />
-              <p>{intYearReleased}</p>
-              <p>{strAlbum}</p>
-              <p>{idAlbum}</p>
-              <p>{strArtist}</p>
-            </div>
-          )
+          ) =>
+            strAlbum3DThumb && (
+              <div className="albums__card" key={index}>
+                <img src={strAlbum3DThumb} alt="Album image" width={"200px"} />
+                <p>{intYearReleased}</p>
+                <p>{strAlbum}</p>
+                <p>{idAlbum}</p>
+                <p>{strArtist}</p>
+              </div>
+            )
         )}
       </section>
     </>
