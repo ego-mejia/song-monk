@@ -3,18 +3,23 @@ import Song from "./Song";
 
 const SearchResults = ({ songList, onAddToLibrary }) => {
   return (
-    <section id="searchResults" className="songs">
-      {songList.map(({ title, artist, album }, index) => (
-        <Song
-          title={title}
-          artist={artist}
-          album={album}
-          showButton={true}
-          onAddToLibrary={onAddToLibrary}
-          key={index}
-        />
-      ))}
-    </section>
+    <>
+      <div className="App__title">
+        <h1>Ponte Monk!</h1>
+      </div>
+      <section id="searchResults" className="songs">
+        {songList.map(({ title, artist, album }, index) => (
+          <Song
+            title={title}
+            artist={artist}
+            album={album}
+            showButton={true}
+            onAddToLibrary={onAddToLibrary}
+            key={index}
+          />
+        ))}
+      </section>
+    </>
   );
 };
 
