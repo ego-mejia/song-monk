@@ -5,9 +5,9 @@ import Song from "./Song";
 const Library = ({ songList }) => {
   return (
     <>
-      <div className="App__title">
+      {/* <div className="App__title">
         <h1>Tus Canciones</h1>
-      </div>
+      </div> */}
       <section id="Library" className="songs">
         {songList.map(({ title, artist, album }, index) => (
           <Song title={title} artist={artist} album={album} key={index} />

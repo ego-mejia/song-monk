@@ -3,7 +3,7 @@ import Header from "./components/Header";
 // import SearchResults from "./components/SearchResults";
 // import Library from "./components/Library";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
+import Home from "./Pages/Home";
 import "./style/main.css";
 import useFetch from "./hooks/useFetch";
 // import Song from "./components/Song";
@@ -42,8 +42,7 @@ https://www.theaudiodb.com/free_music_api
         <Route
           path="/"
           element={<Home allSongs={allSongs} loading={loading} error={error} />}
-        />{" "}
-        QUIERO MANDAR LO QUE SAL DE useFetch AQUI
+        />
         {/* <Route path="/song" element={<Song />} /> */}
       </Routes>
     </div>

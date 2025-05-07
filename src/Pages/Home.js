@@ -1,26 +1,29 @@
 import React from "react";
-import SearchResults from "./components/SearchResults";
-import { songsList } from "./components/songsData";
 import { useState } from "react";
-// import Library from "./components/Library";
+import Library from "../components/Library";
+import SearchResults from "../components/SearchResults";
 
 // * Renderizar componente padre
 const Home = ({ allSongs, loading, error }) => {
-  const [library, setLibrary] = useState([]);
+  const [librarySongs, setLibrarySongs] = useState([]);
   // Renderizar Datos con el Hook
 
   // Función para agregar canciones a la biblioteca
   const handleAddToLibrary = (song) => {
     // Evita duplicados
     if (
-      !library.find((s) => s.title === song.title && s.artist === song.artist)
+      !librarySongs.find(
+        (s) => s.title === song.title && s.artist === song.artist
+      )
     ) {
-      setLibrary([...library, song]);
+      setLibrarySongs([...librarySongs, song]);
     }
   };
 
   return (
     <>
+      <h1>Library</h1>
+      <Library songList={librarySongs} />
       <h1>Home screen</h1>
       <SearchResults songList={allSongs} onAddToLibrary={handleAddToLibrary} />
     </>
