@@ -1,25 +1,17 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Header from "./components/Header";
-import SearchResults from "./components/SearchResults";
-import Library from "./components/Library";
-import { songsList } from "./components/songsData";
-import axios from "axios";
-
+// import SearchResults from "./components/SearchResults";
+// import Library from "./components/Library";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home";
 import "./style/main.css";
+import useFetch from "./hooks/useFetch";
+// import Song from "./components/Song";
+import { songsList } from "./components/songsData";
 
 const App = () => {
-  const [allSongs, setallSongs] = useState([]);
-  const [library, setLibrary] = useState([]);
+  const { allSongs, loading, error } = useFetch(songsList);
 
-  // Función para agregar canciones a la biblioteca
-  const handleAddToLibrary = (song) => {
-    // Evita duplicados
-    if (
-      !library.find((s) => s.title === song.title && s.artist === song.artist)
-    ) {
-      setLibrary([...library, song]);
-    }
-  };
   /*
 * Buscar Album por artista
 https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
@@ -34,33 +26,26 @@ Documentación API
 https://www.theaudiodb.com/free_music_api
 */
 
-  // * Importar data con axios.
-  useEffect(() => {
-    const fetchAlbumsByArtist = async () => {
-      try {
-        console.log("fetching data...");
-        // const response = await axios.get(
-        //   "https://www.theaudiodb.com/api/v1/json/2/searchalbum.php?s=oasis"
-        // );
-        // setallSongs(response.data);
-        // console.log(response.data);
-        setallSongs(songsList);
-        console.log(songsList);
-      } catch (e) {
-        console.log(e.message);
-      }
-    };
-    fetchAlbumsByArtist();
-  }, []);
-
+  /*
+  TODO: Define dos rutas principales
+  TODO: /: Página principal que mostrará los resultados de búsqueda. 
+  TODO: /song/:id: Página que mostrará los detalles de una canción específica.
+   */
   return (
     <div className="App">
       <Header />
-
-      <SearchResults songList={allSongs} onAddToLibrary={handleAddToLibrary} />
+      {/* <SearchResults songList={allSongs} onAddToLibrary={handleAddToLibrary} /> */}
       {/* <div className="Library"> */}
-      <Library songList={library} />
+      {/* <Library songList={library} /> */}
       {/* </div> */}
+      <Routes>
+        <Route
+          path="/"
+          element={<Home allSongs={allSongs} loading={loading} error={error} />}
+        />{" "}
+        QUIERO MANDAR LO QUE SAL DE useFetch AQUI
+        {/* <Route path="/song" element={<Song />} /> */}
+      </Routes>
     </div>
   );
 };

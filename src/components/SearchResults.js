@@ -1,12 +1,13 @@
 import React from "react";
 import Song from "./Song";
 
+// Componente que renderiza todas las canciones
 const SearchResults = ({ songList, onAddToLibrary }) => {
   return (
     <>
-      <div className="App__title">
+      {/* <div className="App__title">
         <h1>Ponte Monk!</h1>
-      </div>
+      </div> */}
       <section id="searchResults" className="songs">
         {songList.map(({ title, artist, album }, index) => (
           <Song

@@ -1,6 +1,7 @@
 import React from "react";
 import Song from "./Song";
 
+// Componente que renderiza las canciones en la biblioteca del usuario
 const Library = ({ songList }) => {
   return (
     <>
