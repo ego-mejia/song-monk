@@ -1,0 +1,9 @@
+.artists{
+    margin-bottom: 20px;
+    &__grid{
+        display: grid;
+        // background-color: red;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem; 
+    }
+}

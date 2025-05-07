@@ -6,17 +6,19 @@ import Header from "./components/Header";
 import Home from "./Pages/Home";
 import SongDetails from "./Pages/SongDetails";
 // Hooks
-import useFetch from "./hooks/useFetch";
+import useFetchAlbumsByArtist from "./hooks/useFetchAlbumsByArtist";
 // Data
-import { songsList } from "./components/SongsData";
 
 const App = () => {
   // * Manejar los datos en el componente padre
-  const { allSongs, loading, error } = useFetch(songsList);
-  const [librarySongs, setLibrarySongs] = useState([]);
+
   const [formData, setFormData] = useState({
-    search: "",
+    search: "oasis",
   });
+  const { fetchedAlbums, loading, error } = useFetchAlbumsByArtist(
+    formData.search
+  );
+  const [librarySongs, setLibrarySongs] = useState([]);
   /*
   * Buscar Album por artista
   https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
@@ -44,7 +46,7 @@ const App = () => {
           path="/"
           element={
             <Home
-              allSongs={allSongs}
+              fetchedAlbum={fetchedAlbums}
               loading={loading}
               error={error}
               librarySongs={librarySongs}

@@ -108,4 +108,13 @@ h1 {
 .searchbar__container button {
   width: 80px;
   height: 100%;
+}
+
+.artists {
+  margin-bottom: 20px;
+}
+.artists__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }/*# sourceMappingURL=main.css.map */

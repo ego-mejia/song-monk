@@ -5,7 +5,6 @@
 // 2.- Cada vez que se envíe una búsqueda, realiza una petición al endpoint de búsqueda de álbumes en la API utilizando el término ingresado.
 // 3.- Asegurate de que el formulario sea controlado por React
 import React, { useState } from "react";
-
 const SearchBar = ({ formData, setFormData }) => {
   // const [formData, setFormData] = useState({
   //   search: "",
@@ -29,7 +28,7 @@ const SearchBar = ({ formData, setFormData }) => {
   return (
     <form onSubmit={handleSubmit} className="searchbar">
       <div className="searchbar__container">
-        {/* <label className="block">Buscar canción:</label> */}
+        <label className="block">Buscar canción:</label>
         <input
           type="text"
           name="search"
