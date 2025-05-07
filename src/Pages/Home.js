@@ -5,7 +5,15 @@ import SearchResults from "../components/SearchResults";
 import SearchBar from "../components/SearchBar";
 
 // * Renderizar componente padre
-const Home = ({ allSongs, loading, error, librarySongs, setLibrarySongs }) => {
+const Home = ({
+  allSongs,
+  loading,
+  error,
+  librarySongs,
+  setLibrarySongs,
+  formData,
+  setFormData,
+}) => {
   // Función para agregar canciones a la biblioteca
   const handleAddToLibrary = (song) => {
     // Evita duplicados
@@ -23,7 +31,7 @@ const Home = ({ allSongs, loading, error, librarySongs, setLibrarySongs }) => {
       <h1>Library</h1>
       <Library songList={librarySongs} />
       <h1>Home screen</h1>
-      <SearchBar />
+      <SearchBar formData={formData} setFormData={setFormData} />
       {error ? (
         <p>{error}</p>
       ) : (

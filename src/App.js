@@ -14,6 +14,9 @@ const App = () => {
   // * Manejar los datos en el componente padre
   const { allSongs, loading, error } = useFetch(songsList);
   const [librarySongs, setLibrarySongs] = useState([]);
+  const [formData, setFormData] = useState({
+    search: "",
+  });
   /*
   * Buscar Album por artista
   https://theaudiodb.com/api/v1/json/2/searchalbum.php?s=artist_name
@@ -46,6 +49,8 @@ const App = () => {
               error={error}
               librarySongs={librarySongs}
               setLibrarySongs={setLibrarySongs}
+              formData={formData}
+              setFormData={setFormData}
             />
           }
         />

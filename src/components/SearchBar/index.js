@@ -6,13 +6,12 @@
 // 3.- Asegurate de que el formulario sea controlado por React
 import React, { useState } from "react";
 
-const SearchBar = () => {
-  const [formData, setFormData] = useState({
-    search: "",
-  });
-  // Agregar un usestate para guardar la busqueda del formulario
-  //   const handleSubmit = () => {};
+const SearchBar = ({ formData, setFormData }) => {
+  // const [formData, setFormData] = useState({
+  //   search: "",
+  // });
 
+  // Agregar un usestate para guardar la busqueda del formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
