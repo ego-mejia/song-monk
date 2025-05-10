@@ -15,7 +15,7 @@ const App = () => {
   const [formData, setFormData] = useState({
     search: "119231", //Esto es ACDC
   });
-  const { fetchedAlbums, loading, error } = useFetchAlbumsByArtist(
+  const { fetchedAlbums, loadingAlbums, errorAlbums } = useFetchAlbumsByArtist(
     formData.search
   );
   const [librarySongs, setLibrarySongs] = useState([]);
@@ -29,8 +29,8 @@ const App = () => {
           element={
             <Home
               albumsList={fetchedAlbums}
-              loading={loading}
-              error={error}
+              loading={loadingAlbums}
+              error={errorAlbums}
               librarySongs={librarySongs}
               setLibrarySongs={setLibrarySongs}
               formData={formData}

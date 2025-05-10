@@ -24,7 +24,6 @@ const useFetchAlbumsByArtist = (idArtist) => {
         console.log(`fetching: ${idArtist}`);
 
         const response = await axios.get(
-          // `theaudiodb.com/api/v1/json/2/album.php?i=119231`
           `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
         );
         setFetchedAlbums(response.data.album);
