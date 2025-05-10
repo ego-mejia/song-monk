@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const useFetchAlbumDetails = () => {
+const useFetchAlbumDetails = (idAlbum) => {
   // loadingAlbumDetails
   // errorAlbumDetails
   // 2115888; the weekend
@@ -9,21 +9,23 @@ const useFetchAlbumDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  async function fetchAlbumsDetails(albumID) {
-    try {
-      const response = await axios.get(
-        `https://theaudiodb.com/api/v1/json/2/album.php?m=${albumID}`
-      );
-      setAlbumDetails(response.data.albums);
-      console.log(response.data.albums);
-    } catch (e) {
-      setError("Error fetching data.");
-      console.log(e.message);
-    }
-    setLoading(false);
-  }
-  fetchAlbumsDetails(2115888);
-
+  useEffect(() => {
+    const fetchAlbumsDetails = async () => {
+      try {
+        console.log(`fetching album: ${idAlbum}`);
+        const response = await axios.get(
+          `https://www.theaudiodb.com/api/v1/json/2/album.php?m=${idAlbum}`
+        );
+        setAlbumDetails(response.data.album);
+        console.log(response.data.album);
+      } catch (e) {
+        setError("Error fetching data.");
+        console.log(e.message);
+      }
+      setLoading(false);
+    };
+    fetchAlbumsDetails();
+  }, []);
   return { albumDetails, loading, error };
 };
 

@@ -7,7 +7,7 @@ import Home from "./Pages/Home";
 import SongDetails from "./Pages/SongDetails";
 // Hooks
 import useFetchAlbumsByArtist from "./hooks/useFetchAlbumsByArtist";
-// Data
+import useFetchAlbumDetails from "./hooks/useFetchAlbumDetails";
 
 const App = () => {
   // * Manejar los datos en el componente padre
@@ -15,9 +15,13 @@ const App = () => {
   const [formData, setFormData] = useState({
     search: "119231", //Esto es ACDC
   });
+
   const { fetchedAlbums, loadingAlbums, errorAlbums } = useFetchAlbumsByArtist(
     formData.search
   );
+
+  const { albumDetails, loading, error } = useFetchAlbumDetails(2115888);
+
   const [librarySongs, setLibrarySongs] = useState([]);
 
   return (
@@ -38,6 +42,7 @@ const App = () => {
             />
           }
         />
+
         <Route path="/song" element={<SongDetails />} />
       </Routes>
     </div>

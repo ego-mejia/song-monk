@@ -21,7 +21,7 @@ const useFetchAlbumsByArtist = (idArtist) => {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        console.log(`fetching: ${idArtist}`);
+        console.log(`fetching artist: ${idArtist}`);
 
         const response = await axios.get(
           `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
