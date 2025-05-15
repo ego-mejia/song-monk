@@ -16,11 +16,19 @@ const App = () => {
     search: "119231", //Esto es ACDC
   });
 
-  const { fetchedAlbums, loadingAlbums, errorAlbums } = useFetchAlbumsByArtist(
-    formData.search
-  );
+  const {
+    fetchedAlbums,
+    loading: loadingAlbums,
+    error: errorAlbums,
+  } = useFetchAlbumsByArtist(formData.search);
 
-  const { albumDetails, loading, error } = useFetchAlbumDetails(2115888);
+  console.log("App render:", { loadingAlbums, fetchedAlbums, errorAlbums });
+
+  const {
+    albumDetails,
+    loading: loadingAlbumDetails,
+    error: errorAlbumDetails,
+  } = useFetchAlbumDetails(2115888);
 
   const [librarySongs, setLibrarySongs] = useState([]);
 

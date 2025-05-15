@@ -49,6 +49,8 @@ const Home = ({
       <SearchBar formData={formData} setFormData={setFormData} />
       {error ? (
         <p>{error}</p>
+      ) : loading ? (
+        <p>Loading...</p>
       ) : (
         // <p>Test</p>
         // ! Este componente renderiza los Albums, canciones, etc

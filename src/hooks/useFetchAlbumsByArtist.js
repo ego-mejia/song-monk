@@ -26,6 +26,7 @@ const useFetchAlbumsByArtist = (idArtist) => {
         const response = await axios.get(
           `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
         );
+
         setFetchedAlbums(response.data.album);
         console.log(response.data.album);
       } catch (e) {
@@ -34,7 +35,9 @@ const useFetchAlbumsByArtist = (idArtist) => {
       }
       setLoading(false);
     };
-    fetchAlbums();
+    setTimeout(() => {
+      fetchAlbums();
+    }, 2000);
   }, []);
 
   return { fetchedAlbums, loading, error };
