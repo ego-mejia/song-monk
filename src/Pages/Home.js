@@ -31,8 +31,8 @@ const Home = ({
 
   return (
     <>
-      <h1>Library</h1>
-      <Library songList={librarySongs} />
+      {/* <h1>Library</h1> */}
+      {/* <Library songList={librarySongs} /> */}
 
       <h1>Home screen</h1>
 

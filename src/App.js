@@ -8,6 +8,8 @@ import SongDetails from "./Pages/SongDetails";
 // Hooks
 import useFetchAlbumsByArtist from "./hooks/useFetchAlbumsByArtist";
 import useFetchAlbumDetails from "./hooks/useFetchAlbumDetails";
+import ArtistInformation from "./Pages/ArtistInformation";
+import Documentation from "./Pages/Documentation";
 
 const App = () => {
   // * Manejar los datos en el componente padre
@@ -52,6 +54,8 @@ const App = () => {
         />
 
         <Route path="/song" element={<SongDetails />} />
+        <Route path="/artists" element={<ArtistInformation />} />
+        <Route path="/documentation" element={<Documentation />} />
       </Routes>
     </div>
   );

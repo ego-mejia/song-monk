@@ -14,8 +14,8 @@ const Header = () => {
       </Link>
       <div className="navbar__links">
         <Link to="/">Inicio</Link>
-        <Link to="/song">Artistas</Link>
-        <Link to="/song">Documentación</Link>
+        <Link to="/artists">Artistas</Link>
+        <Link to="/documentation">Documentación</Link>
       </div>
     </header>
   );
