@@ -2,6 +2,7 @@
 import React from "react";
 import Artists from "../components/Artists";
 import { artistList } from "../components/ArtistData";
+import { useArtistDetails } from "../hooks/useArtistDetails";
 
 const ArtistInformation = () => {
   return (
