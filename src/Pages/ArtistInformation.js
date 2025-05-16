@@ -20,19 +20,3 @@ const ArtistInformation = () => {
 };
 
 export default ArtistInformation;
-
-// // src/components/Artists.jsx
-// import React from "react";
-// import ArtistCard from "../ArtistCard";
-
-// const Artists = ({ artistList }) => {
-//   return (
-//     <div className="artists__grid">
-//       {artistList.map(({ name, id }) => (
-//         <ArtistCard key={id} name={name} id={id} />
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Artists;

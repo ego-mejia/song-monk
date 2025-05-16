@@ -6,7 +6,7 @@ const ArtistCard = ({ name, id }) => {
   const { fetchedArtist, loadingArtist, errorArtist } = useArtistDetails(id);
 
   if (loadingArtist) return <div>Cargando {name}…</div>;
-  if (errorArtist) return <div>Error al cargar {name}</div>;
+  if (errorArtist) return;
 
   // fetchedArtist es un array [{…}] según la API, por ejemplo:
   const artist = fetchedArtist[0] || {};
