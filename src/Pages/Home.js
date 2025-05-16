@@ -31,8 +31,8 @@ const Home = ({
 
   return (
     <>
-      <h1>Library</h1>
-      <Library songList={librarySongs} />
+      {/* <h1>Library</h1> */}
+      {/* <Library songList={librarySongs} /> */}
 
       <h1>Home screen</h1>
 
@@ -49,6 +49,8 @@ const Home = ({
       <SearchBar formData={formData} setFormData={setFormData} />
       {error ? (
         <p>{error}</p>
+      ) : loading ? (
+        <p>Loading...</p>
       ) : (
         // <p>Test</p>
         // ! Este componente renderiza los Albums, canciones, etc

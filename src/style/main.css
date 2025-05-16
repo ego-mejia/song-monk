@@ -135,18 +135,27 @@ h1 {
   font-weight: bold;
 }
 
+/* Animación: de start (0) a finish (-50% del ancho total) */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-10%);
+  } /* empieza desplazado media pista */
+  100% {
+    transform: translateX(0);
+  } /* termina en posición inicial */
+}
 .albums {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
 
-/* Animación: de start (0) a finish (-50% del ancho total) */
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  } /* empieza desplazado media pista */
-  100% {
-    transform: translateX(0);
-  } /* termina en posición inicial */
+.topArtist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.topArtist__card {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */
