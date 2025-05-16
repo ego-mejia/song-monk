@@ -7,7 +7,9 @@ const ArtistInformation = () => {
   return (
     <div>
       <h1>Información de Artistas</h1>
-      <Artists artistList={artistList} />
+      <div className="topArtists">
+        <Artists artistList={artistList} className="topArtists" />
+      </div>
       {/* Tal vez sea interesante agregar, como grid */}
     </div>
   );
