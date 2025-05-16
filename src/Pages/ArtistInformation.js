@@ -2,18 +2,37 @@
 import React from "react";
 import Artists from "../components/Artists";
 import { artistList } from "../components/ArtistData";
-import { useArtistDetails } from "../hooks/useArtistDetails";
+import ArtistCard from "../components/ArtistCard";
 
 const ArtistInformation = () => {
   return (
     <div>
       <h1>Información de Artistas</h1>
-      <div className="topArtists">
-        <Artists artistList={artistList} className="topArtists" />
+      {/* <div className="topArtists"> */}
+      <div className="topArtist">
+        {artistList.map(({ name, id }) => (
+          <ArtistCard key={id} name={name} id={id} />
+        ))}
+        {/* </div> */}
       </div>
-      {/* Tal vez sea interesante agregar, como grid */}
     </div>
   );
 };
 
 export default ArtistInformation;
+
+// // src/components/Artists.jsx
+// import React from "react";
+// import ArtistCard from "../ArtistCard";
+
+// const Artists = ({ artistList }) => {
+//   return (
+//     <div className="artists__grid">
+//       {artistList.map(({ name, id }) => (
+//         <ArtistCard key={id} name={name} id={id} />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Artists;

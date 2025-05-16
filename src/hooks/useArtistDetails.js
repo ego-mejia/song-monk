@@ -9,8 +9,6 @@ const useArtistDetails = (idArtist) => {
   useEffect(() => {
     const fetchArtists = async () => {
       try {
-        // console.log(`fetching artist: ${idArtist}`);
-
         const response = await axios.get(
           `https://www.theaudiodb.com/api/v1/json/2/artist.php?i=${idArtist}`
         );

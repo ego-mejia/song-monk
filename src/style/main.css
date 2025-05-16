@@ -150,8 +150,12 @@ h1 {
   gap: 1rem;
 }
 
-.topArtists {
+.topArtist {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+}
+.topArtist__card {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */
