@@ -4,25 +4,31 @@
 // 1.- Conecta este componente al estado principal en App utilizando useState para guardar el término de búsqueda ingresado por el usuario.
 // 2.- Cada vez que se envíe una búsqueda, realiza una petición al endpoint de búsqueda de álbumes en la API utilizando el término ingresado.
 // 3.- Asegurate de que el formulario sea controlado por React
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 const SearchBar = ({ formData, setFormData }) => {
-  // const [formData, setFormData] = useState({
-  //   search: "",
-  // });
+  const [searchBarInput, setSearchBarInput] = useState({ search: "" });
 
   // Agregar un usestate para guardar la busqueda del formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setSearchBarInput((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
+  useEffect(() => {
+    console.log("searchBarInput ahora es:", searchBarInput.search);
+  }, [searchBarInput]);
+  useEffect(() => {
+    console.log("Datos enviados: formData.search", formData.search);
+    console.log("Datos enviados: formData", formData);
+  }, [formData]);
+
   const handleSubmit = (e) => {
     e.preventDefault(); // Previene el envío tradicional del formulario
-    console.log("Datos enviados:", formData);
-    // Aquí puedes hacer algo con los datos, como enviarlos a una API
+    setFormData(searchBarInput.search);
   };
 
   return (
@@ -32,7 +38,7 @@ const SearchBar = ({ formData, setFormData }) => {
         <input
           type="text"
           name="search"
-          value={formData.name}
+          value={searchBarInput.search}
           onChange={handleChange}
         />
         <button type="submit">Buscar</button>

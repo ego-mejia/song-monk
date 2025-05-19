@@ -36,6 +36,7 @@ const Home = ({
 
       <h1>Home screen</h1>
 
+      {/* -------- Artist badges with IDs*/}
       <section className="artist-badges">
         <h3>Artistas</h3>
         <div className="artist-badges__container">
@@ -46,15 +47,25 @@ const Home = ({
         </div>
       </section>
 
+      {/* -------- Album Search bar by artist ID*/}
       <SearchBar formData={formData} setFormData={setFormData} />
-      {error ? (
+
+      {/* {error ? (
+        <p>{error}</p>
+      ) : albumsList.length === 0 ? (
+        <></>
+      ) : loading ? (
+        <p>Loading...</p>
+      ) : ( */}
+
+      {albumsList.length === 0 ? (
+        <></>
+      ) : error ? (
         <p>{error}</p>
       ) : loading ? (
         <p>Loading...</p>
       ) : (
-        // <p>Test</p>
-        // ! Este componente renderiza los Albums, canciones, etc
-        // TODO: pendiente de corregir.
+        /* -------- Render Album Cards*/
         <SearchedAlbums albumsList={albumsList} />
         // <SearchResults
         //   albumList={fetchedAlbums}
