@@ -14,23 +14,22 @@ import Documentation from "./Pages/Documentation";
 const App = () => {
   // * Manejar los datos en el componente padre
 
-  const [formData, setFormData] = useState({
-    search: "119231", //Esto es ACDC
-  });
+  const [formData, setFormData] = useState([]);
 
   const {
     fetchedAlbums,
     loading: loadingAlbums,
     error: errorAlbums,
-  } = useFetchAlbumsByArtist(formData.search);
+    fetchAlbums,
+  } = useFetchAlbumsByArtist(formData);
 
   console.log("App render:", { loadingAlbums, fetchedAlbums, errorAlbums });
 
-  const {
-    albumDetails,
-    loading: loadingAlbumDetails,
-    error: errorAlbumDetails,
-  } = useFetchAlbumDetails(2115888);
+  // const {
+  // albumDetails,
+  // loading: loadingAlbumDetails,
+  // error: errorAlbumDetails,
+  // } = useFetchAlbumDetails(2115888);
 
   const [librarySongs, setLibrarySongs] = useState([]);
 

@@ -18,29 +18,25 @@ const useFetchAlbumsByArtist = (idArtist) => {
   const [fetchedAlbums, setFetchedAlbums] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      try {
-        console.log(`fetching artist: ${idArtist}`);
 
-        const response = await axios.get(
-          `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
-        );
+  const fetchAlbums = async () => {
+    try {
+      console.log(`fetching artist: ${idArtist}`);
 
-        setFetchedAlbums(response.data.album);
-        console.log(response.data.album);
-      } catch (e) {
-        setError("Error: fetching data.");
-        console.log(e.message);
-      }
-      setLoading(false);
-    };
-    setTimeout(() => {
-      fetchAlbums();
-    }, 2000);
-  }, []);
+      const response = await axios.get(
+        `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
+      );
 
-  return { fetchedAlbums, loading, error };
+      setFetchedAlbums(response.data.album);
+      console.log(response.data.album);
+    } catch (e) {
+      setError("Error: fetching data.");
+      console.log(e.message);
+    }
+    setLoading(false);
+  };
+
+  return { fetchedAlbums, loading, error, fetchAlbums };
 };
 export default useFetchAlbumsByArtist;
 
