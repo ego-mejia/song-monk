@@ -14,14 +14,14 @@ import Documentation from "./Pages/Documentation";
 const App = () => {
   // * Manejar los datos en el componente padre
 
-  const [formData, setFormData] = useState([]);
+  const [formData, setFormData] = useState(["111381"]);
 
   const {
     fetchedAlbums,
     loading: loadingAlbums,
     error: errorAlbums,
     fetchAlbums,
-  } = useFetchAlbumsByArtist(formData);
+  } = useFetchAlbumsByArtist();
 
   console.log("App render:", { loadingAlbums, fetchedAlbums, errorAlbums });
 
@@ -30,6 +30,10 @@ const App = () => {
   // loading: loadingAlbumDetails,
   // error: errorAlbumDetails,
   // } = useFetchAlbumDetails(2115888);
+
+  useEffect(() => {
+    fetchAlbums(formData);
+  }, [formData]);
 
   const [librarySongs, setLibrarySongs] = useState([]);
 
@@ -48,6 +52,7 @@ const App = () => {
               setLibrarySongs={setLibrarySongs}
               formData={formData}
               setFormData={setFormData}
+              fetchAlbums={fetchAlbums}
             />
           }
         />

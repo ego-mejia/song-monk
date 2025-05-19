@@ -14,21 +14,23 @@ import axios from "axios";
 //     strStyle: string;
 //   }
 // La respuesta del endpoint devolverá información sobre los álbumes del artista buscado. Extrae la información relevante, como el título de los álbumes y sus canciones asociadas.
-const useFetchAlbumsByArtist = (idArtist) => {
+const useFetchAlbumsByArtist = () => {
   const [fetchedAlbums, setFetchedAlbums] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchAlbums = async () => {
+  const fetchAlbums = async (idArtist) => {
     try {
-      console.log(`fetching artist: ${idArtist}`);
-
-      const response = await axios.get(
-        `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
-      );
-
-      setFetchedAlbums(response.data.album);
-      console.log(response.data.album);
+      if (idArtist.length === 0) {
+        console.log(`No Artist ID for fetching.`);
+      } else {
+        console.log(`fetching artist: ${idArtist}`);
+        const response = await axios.get(
+          `https://www.theaudiodb.com/api/v1/json/2/album.php?i=${idArtist}`
+        );
+        setFetchedAlbums(response.data.album);
+        console.log(response.data.album);
+      }
     } catch (e) {
       setError("Error: fetching data.");
       console.log(e.message);

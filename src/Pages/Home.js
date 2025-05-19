@@ -50,10 +50,18 @@ const Home = ({
       {/* -------- Album Search bar by artist ID*/}
       <SearchBar formData={formData} setFormData={setFormData} />
 
-      {error ? (
+      {/* {error ? (
         <p>{error}</p>
       ) : albumsList.length === 0 ? (
         <></>
+      ) : loading ? (
+        <p>Loading...</p>
+      ) : ( */}
+
+      {albumsList.length === 0 ? (
+        <></>
+      ) : error ? (
+        <p>{error}</p>
       ) : loading ? (
         <p>Loading...</p>
       ) : (

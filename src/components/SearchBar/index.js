@@ -22,12 +22,13 @@ const SearchBar = ({ formData, setFormData }) => {
     console.log("searchBarInput ahora es:", searchBarInput.search);
   }, [searchBarInput]);
   useEffect(() => {
-    console.log("Datos enviados:", formData.search);
+    console.log("Datos enviados: formData.search", formData.search);
+    console.log("Datos enviados: formData", formData);
   }, [formData]);
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Previene el envío tradicional del formulario
-    setFormData(searchBarInput);
+    setFormData(searchBarInput.search);
   };
 
   return (
