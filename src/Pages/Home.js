@@ -4,8 +4,8 @@ import Library from "../components/Library";
 import SearchResults from "../components/SearchResults";
 import SearchBar from "../components/SearchBar";
 // Lista de Artistas
-import { artistList } from "../components/ArtistData";
-import Artists from "../components/Artists";
+import { artistList } from "../data/artistData";
+import ArtistBadges from "../components/ArtistBadges";
 import SearchedAlbums from "../components/SearchedAlbums";
 // * Renderizar componente padre
 const Home = ({
@@ -36,12 +36,12 @@ const Home = ({
 
       <h1>Home screen</h1>
 
-      <section className="artists">
+      <section className="artist-badges">
         <h3>Artistas</h3>
-        <div className="artists__container">
-          <div className="artists__track">
-            <Artists artistList={artistList} />
-            <Artists artistList={artistList} />
+        <div className="artist-badges__container">
+          <div className="artist-badges__track">
+            <ArtistBadges artistList={artistList} />
+            <ArtistBadges artistList={artistList} />
           </div>
         </div>
       </section>
