@@ -110,20 +110,20 @@ h1 {
   height: 100%;
 }
 
-.artists {
+.artist-badges {
   margin-bottom: 20px;
 }
-.artists__container {
+.artist-badges__container {
   display: flex;
   width: 100%;
   overflow: hidden;
   gap: 1rem;
 }
-.artists__track {
+.artist-badges__track {
   display: flex; /* pone todos .artist__card en fila */
   animation: scroll-right 60s linear infinite;
 }
-.artists__card {
+.artist-badges__card {
   display: flex;
   gap: 5px;
   background-color: whitesmoke;
@@ -131,7 +131,7 @@ h1 {
   flex: 0 0 auto; /* que cada card conserve su ancho */
   margin-right: 1rem; /* separación opcional */
 }
-.artists__card p:first-child {
+.artist-badges__card p:first-child {
   font-weight: bold;
 }
 

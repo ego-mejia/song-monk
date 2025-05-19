@@ -36,10 +36,10 @@ const Home = ({
 
       <h1>Home screen</h1>
 
-      <section className="artists">
+      <section className="artist-badges">
         <h3>Artistas</h3>
-        <div className="artists__container">
-          <div className="artists__track">
+        <div className="artist-badges__container">
+          <div className="artist-badges__track">
             <ArtistBadges artistList={artistList} />
             <ArtistBadges artistList={artistList} />
           </div>
