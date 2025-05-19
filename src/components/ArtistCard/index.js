@@ -1,6 +1,5 @@
 // src/components/ArtistCard.jsx
 import React from "react";
-import useArtistDetails from "../../hooks/useArtistDetails";
 
 const ArtistCard = ({ name, img, id }) => {
   return (

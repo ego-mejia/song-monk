@@ -4,7 +4,7 @@ import Library from "../components/Library";
 import SearchResults from "../components/SearchResults";
 import SearchBar from "../components/SearchBar";
 // Lista de Artistas
-import { artistList } from "../components/ArtistData";
+import { artistList } from "../data/artistData";
 import Artists from "../components/Artists";
 import SearchedAlbums from "../components/SearchedAlbums";
 // * Renderizar componente padre
