@@ -1,6 +1,6 @@
 import React from "react";
 
-const Artists = ({ artistList }) => {
+const ArtistBadges = ({ artistList }) => {
   return artistList.map(({ name, id }, index) => (
     <div className="artists__card" key={index}>
       <p>{name}</p>
@@ -9,4 +9,4 @@ const Artists = ({ artistList }) => {
   ));
 };
 
-export default Artists;
+export default ArtistBadges;
