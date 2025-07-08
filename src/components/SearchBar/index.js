@@ -34,7 +34,7 @@ const SearchBar = ({ formData, setFormData }) => {
   return (
     <form onSubmit={handleSubmit} className="searchbar">
       <div className="searchbar__container">
-        <label className="block">Buscar canción:</label>
+        <label className="block">Introduce ID de Artista:</label>
         <input
           type="text"
           name="search"

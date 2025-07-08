@@ -58,20 +58,18 @@ const Home = ({
         <p>Loading...</p>
       ) : ( */}
 
-      {albumsList.length === 0 ? (
-        <></>
-      ) : error ? (
-        <p>{error}</p>
+      {error ? (
+        <>
+          <p>{error}</p>
+        </>
       ) : loading ? (
         <p>Loading...</p>
+      ) : !albumsList || albumsList.length === 0 ? (
+        <>
+          <p>Artist ID no existe.</p>
+        </>
       ) : (
-        /* -------- Render Album Cards*/
         <SearchedAlbums albumsList={albumsList} />
-        // <SearchResults
-        //   albumList={fetchedAlbums}
-        //   onAddToLibrary={handleAddToLibrary}
-        //   formData={formData}
-        // />
       )}
     </>
   );
