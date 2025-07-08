@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import FetchedSongs from "./FetchedSongs";
 /*
 image: strAlbum3DThumb
 year: intYearReleased
@@ -9,6 +9,17 @@ strArtist: strArtist
 */
 
 const SearchedAlbums = ({ albumsList }) => {
+  // Logic to save the selected Album
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
+
+  const handleCardClick = (album) => {
+    setSelectedAlbum(album);
+  };
+
+  const closeModal = () => {
+    setSelectedAlbum(null);
+  };
+
   return (
     <>
       <section id="searchAlbums" className="albums">
@@ -18,7 +29,15 @@ const SearchedAlbums = ({ albumsList }) => {
             index
           ) =>
             strAlbum3DThumb && (
-              <div className="albums__card" key={index}>
+              <div
+                className="albums__card"
+                key={index}
+                onClick={() =>
+                  handleCardClick({
+                    idAlbum,
+                  })
+                }
+              >
                 <img src={strAlbum3DThumb} alt="Album image" width={"200px"} />
                 <p>{intYearReleased}</p>
                 <p>{strAlbum}</p>
@@ -28,6 +47,11 @@ const SearchedAlbums = ({ albumsList }) => {
             )
         )}
       </section>
+      {selectedAlbum ? (
+        <FetchedSongs closeModal={closeModal} selectedAlbum={selectedAlbum} />
+      ) : (
+        <p>NADA</p>
+      )}
     </>
   );
 };
