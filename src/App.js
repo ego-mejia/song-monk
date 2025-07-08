@@ -15,6 +15,8 @@ const App = () => {
   // * Manejar los datos en el componente padre
 
   const [formData, setFormData] = useState(["111381"]);
+  // Logic to save the selected Album
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   const {
     fetchedAlbums,
@@ -53,6 +55,9 @@ const App = () => {
               formData={formData}
               setFormData={setFormData}
               fetchAlbums={fetchAlbums}
+              // For selecting AlbumID for song list
+              selectedAlbum={selectedAlbum}
+              setSelectedAlbum={setSelectedAlbum}
             />
           }
         />

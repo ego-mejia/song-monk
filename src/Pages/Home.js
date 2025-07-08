@@ -7,6 +7,9 @@ import SearchBar from "../components/SearchBar";
 import { artistList } from "../data/artistData";
 import ArtistBadges from "../components/ArtistBadges";
 import SearchedAlbums from "../components/SearchedAlbums";
+// RENDERIZAR CANCIONES DE ALBUM SELECCIONADO
+// import FetchedSongs from "./FetchedSongs";
+
 // * Renderizar componente padre
 const Home = ({
   albumsList,
@@ -16,6 +19,8 @@ const Home = ({
   setLibrarySongs,
   formData,
   setFormData,
+  selectedAlbum,
+  setSelectedAlbum,
 }) => {
   // Función para agregar canciones a la biblioteca
   const handleAddToLibrary = (song) => {
@@ -58,6 +63,7 @@ const Home = ({
         <p>Loading...</p>
       ) : ( */}
 
+      {/* INICIA LÓGICA DE RENDERIZADO DE ÁLBUMES */}
       {error ? (
         <>
           <p>{error}</p>
@@ -69,8 +75,25 @@ const Home = ({
           <p>Artist ID no existe.</p>
         </>
       ) : (
-        <SearchedAlbums albumsList={albumsList} />
+        <SearchedAlbums
+          albumsList={albumsList}
+          selectedAlbum={selectedAlbum}
+          setSelectedAlbum={setSelectedAlbum}
+        />
       )}
+      {/* TERMINA LOGICA DE RENDERIZADO DE ÁLBUMES */}
+
+      {/* LOGICA PARA RENDERIZAR LAS CANCIONES SELECCIONADAS */}
+      {/* 1.- Solamente si existe selectedAlbum, es decir si no es null, renderizar */}
+      {/* 1.1.- El fetch de Data se hace en App.js al momento de actualiarse el valor. */}
+      {/* 1.2.-Solamente si hay un cambio en el Selected ALbum ID, realizar el fetch. */}
+      {/* 1.2.1.- Mandar lista de fetched Songs al componente Home, luego consumirlo en fetchedSongs. */}
+      {/* 2.- Se renderiza componente de FetchedSongs el cual toma consume la lista de canciones y sus datos*/}
+      {/* {selectedAlbum ? (
+        <FetchedSongs closeModal={closeModal} selectedAlbum={selectedAlbum} />
+      ) : (
+        <p>NADA</p>
+      )} */}
     </>
   );
 };

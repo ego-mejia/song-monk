@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FetchedSongs from "./FetchedSongs";
 /*
 image: strAlbum3DThumb
 year: intYearReleased
@@ -8,10 +7,7 @@ idAlbum: idAlbum
 strArtist: strArtist
 */
 
-const SearchedAlbums = ({ albumsList }) => {
-  // Logic to save the selected Album
-  const [selectedAlbum, setSelectedAlbum] = useState(null);
-
+const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
   const handleCardClick = (album) => {
     setSelectedAlbum(album);
   };
@@ -47,11 +43,6 @@ const SearchedAlbums = ({ albumsList }) => {
             )
         )}
       </section>
-      {selectedAlbum ? (
-        <FetchedSongs closeModal={closeModal} selectedAlbum={selectedAlbum} />
-      ) : (
-        <p>NADA</p>
-      )}
     </>
   );
 };
