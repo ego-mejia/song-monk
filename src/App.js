@@ -64,7 +64,7 @@ const App = () => {
 
         <Route path="/song" element={<SongDetails />} />
         <Route path="/artists" element={<ArtistInformation />} />
-        <Route path="/documentation" element={<Documentation />} />
+        {/* <Route path="/documentation" element={<Documentation />} /> */}
       </Routes>
     </div>
   );
