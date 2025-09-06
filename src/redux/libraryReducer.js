@@ -10,7 +10,7 @@ const initialState = {
 const libraryReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_SONG": //Agrega una canción al estado de la biblioteca
-      return {}; //!PENDING
+      return { ...state, songs: [...state.songs, action.payload] };
     case "REMOVE_SONG": //Elimina una canción del estado de la biblioteca según su ID
       return {
         ...state,
