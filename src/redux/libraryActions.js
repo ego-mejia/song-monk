@@ -7,6 +7,9 @@ export const addSong = (song) => {
   };
 };
 
-export const removeSong = () => {
-  return <div>removeSong</div>;
+export const removeSong = (songId) => {
+  return {
+    type: "REMOVE_SONG",
+    payload: songId,
+  };
 };
