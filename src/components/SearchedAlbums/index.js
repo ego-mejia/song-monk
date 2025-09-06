@@ -39,6 +39,7 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
                 <p>{strAlbum}</p>
                 <p>{idAlbum}</p>
                 <p>{strArtist}</p>
+                <button>Añadir a favoritos</button>
               </div>
             )
         )}
