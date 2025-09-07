@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addAlbum } from "../../redux/libraryActions";
 /*
 image: strAlbum3DThumb
 year: intYearReleased
@@ -8,6 +10,18 @@ strArtist: strArtist
 */
 
 const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
+  const dispatch = useDispatch();
+
+  const handleAddAlbum = (selectedAlbum) => {
+    const album = {
+      id: selectedAlbum.idAlbum,
+      name: selectedAlbum.strAlbum,
+      year: selectedAlbum.intYearReleased,
+      artist: selectedAlbum.strArtist,
+    };
+    dispatch(addAlbum(album));
+  };
+
   const handleCardClick = (album) => {
     setSelectedAlbum(album);
   };
@@ -39,7 +53,16 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
                 <p>{strAlbum}</p>
                 <p>{idAlbum}</p>
                 <p>{strArtist}</p>
-                <button>Añadir a favoritos</button>
+                <button
+                  onClick={handleAddAlbum({
+                    intYearReleased,
+                    strAlbum,
+                    idAlbum,
+                    strArtist,
+                  })}
+                >
+                  Agregar a mi biblioteca
+                </button>
               </div>
             )
         )}

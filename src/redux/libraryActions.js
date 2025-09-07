@@ -1,15 +1,15 @@
 import React from "react";
 
-export const addSong = (song) => {
+export const addAlbum = (album) => {
   return {
-    type: "ADD_SONG",
-    payload: song,
+    type: "ADD_ALBUM",
+    payload: album,
   };
 };
 
-export const removeSong = (songId) => {
+export const removeAlbum = (albumId) => {
   return {
-    type: "REMOVE_SONG",
-    payload: songId,
+    type: "REMOVE_ALBUM",
+    payload: albumId,
   };
 };
