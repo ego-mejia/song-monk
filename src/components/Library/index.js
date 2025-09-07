@@ -1,10 +1,15 @@
 import React from "react";
 import Song from "../Song";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removeAlbum } from "../../redux/libraryActions";
 
 // Componente que renderiza las canciones en la biblioteca del usuario
 const Library = () => {
   const albums = useSelector((state) => state.albums); //? A qué objeto se debe acceder despies de state.album.?????
+  const dispatch = useDispatch();
+  const handleDeleteAlbum = (albumID) => {
+    dispatch(removeAlbum(albumID));
+  };
 
   return (
     //   const album = {
@@ -19,6 +24,13 @@ const Library = () => {
           <h3>{album.name}</h3>
           <p>{album.artist}</p>
           <p>{album.year}</p>
+          <button
+            onClick={() => {
+              handleDeleteAlbum(album.id);
+            }}
+          >
+            Eliminar Album
+          </button>
         </div>
       ))}
     </>

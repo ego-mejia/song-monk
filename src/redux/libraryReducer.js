@@ -15,6 +15,8 @@ const initialState = {
 const libraryReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_ALBUM": //Agrega una canción al estado de la biblioteca
+      // Si ya existe, no se agrega a favoritos
+
       return { ...state, albums: [...state.albums, action.payload] };
     case "REMOVE_ALBUM": //Elimina una canción del estado de la biblioteca según su ID
       return {
