@@ -54,12 +54,14 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
                 <p>{idAlbum}</p>
                 <p>{strArtist}</p>
                 <button
-                  onClick={handleAddAlbum({
-                    intYearReleased,
-                    strAlbum,
-                    idAlbum,
-                    strArtist,
-                  })}
+                  onClick={() => {
+                    handleAddAlbum({
+                      intYearReleased,
+                      strAlbum,
+                      idAlbum,
+                      strArtist,
+                    });
+                  }}
                 >
                   Agregar a mi biblioteca
                 </button>

@@ -1,20 +1,32 @@
 import React from "react";
 import Song from "../Song";
+import { useSelector } from "react-redux";
 
 // Componente que renderiza las canciones en la biblioteca del usuario
-const Library = ({ songList }) => {
+const Library = () => {
+  const albums = useSelector((state) => state.albums); //? A qué objeto se debe acceder despies de state.album.?????
+
   return (
+    //   const album = {
+    // id: selectedAlbum.idAlbum,
+    // name: selectedAlbum.strAlbum,
+    // year: selectedAlbum.intYearReleased,
+    // artist: selectedAlbum.strArtist,
     <>
-      {/* <div className="App__title">
-        <h1>Tus Canciones</h1>
-      </div> */}
-      <section id="Library" className="songs">
-        {songList.map(({ title, artist, album }, index) => (
-          <Song title={title} artist={artist} album={album} key={index} />
-        ))}
-      </section>
+      <h2>Library</h2>
+      {albums.map((album) => (
+        <div>
+          <h3>{album.name}</h3>
+          <p>{album.artist}</p>
+          <p>{album.year}</p>
+        </div>
+      ))}
     </>
   );
 };
 
 export default Library;
+//? 1.- Usa el hook useSelector de React-Redux para acceder al estado global y obtener las canciones almacenadas en la biblioteca.
+//? 2.- Renderiza una lista con las canciones agregadas.
+//? 3.- Agrega un botón "Eliminar" junto a cada canción.
+//? 4.- Usa useDispatch para despachar la acción removeSong cuando se haga clic en "Eliminar".

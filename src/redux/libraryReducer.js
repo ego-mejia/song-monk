@@ -21,6 +21,8 @@ const libraryReducer = (state = initialState, action) => {
         ...state,
         albums: state.albums.filter((album) => album.id !== action.payload),
       };
+    default:
+      return state;
   }
 };
 

@@ -40,6 +40,7 @@ const Home = ({
       {/* <Library songList={librarySongs} /> */}
 
       <h1>Home screen</h1>
+      <Library></Library>
 
       {/* -------- Artist badges with IDs*/}
       <section className="artist-badges">
