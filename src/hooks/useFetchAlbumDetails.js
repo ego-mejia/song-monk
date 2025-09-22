@@ -8,14 +8,11 @@ const useFetchAlbumDetails = (idAlbum) => {
   const [albumDetails, setAlbumDetails] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     const fetchAlbumsDetails = async () => {
       try {
         console.log(`fetching album: ${idAlbum}`);
-        const response = await axios.get(
-          `https://www.theaudiodb.com/api/v1/json/2/album.php?m=${idAlbum}`
-        );
+        const response = await axios.get();
         setAlbumDetails(response.data.album);
         console.log(response.data.album);
       } catch (e) {
