@@ -1,8 +1,8 @@
 // En este componente va a ir la lista de artistas con su respectivo ID para buscar.
 import React from "react";
-import Artists from "../components/ArtistBadges";
-import { artistList } from "../data/artistData";
-import ArtistCard from "../components/ArtistCard";
+import Artists from "../../components/ArtistBadges";
+import { artistList } from "../../data/artistData";
+import ArtistCard from "../../components/ArtistCard";
 
 const ArtistInformation = () => {
   return (

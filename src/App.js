@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 // Components
 import Header from "./components/Header";
 import Home from "./Pages/Home";
-import SongDetails from "./Pages/SongDetails";
 // Hooks
 import useFetchAlbumsByArtist from "./hooks/useFetchAlbumsByArtist";
 import useFetchAlbumDetails from "./hooks/useFetchAlbumDetails";
@@ -63,7 +62,6 @@ const App = () => {
           }
         />
 
-        <Route path="/song" element={<SongDetails />} />
         <Route path="/artists" element={<ArtistInformation />} />
         {/* <Route path="/documentation" element={<Documentation />} /> */}
       </Routes>

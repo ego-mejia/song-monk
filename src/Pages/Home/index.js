@@ -1,0 +1,99 @@
+import React from "react";
+import { useState } from "react";
+import Library from "../../components/Library";
+import SearchResults from "../../components/SearchResults";
+import SearchBar from "../../components/SearchBar";
+// Lista de Artistas
+import { artistList } from "../../data/artistData";
+import ArtistBadges from "../../components/ArtistBadges";
+import SearchedAlbums from "../../components/SearchedAlbums";
+// RENDERIZAR CANCIONES DE ALBUM SELECCIONADO
+// import FetchedSongs from "./FetchedSongs";
+
+// Style
+import {
+  HomePage,
+  ArtistSection,
+  SearchedAlbumSection,
+  LibrarySection,
+} from "./style";
+
+// * Renderizar componente padre
+const Home = ({
+  albumsList,
+  loading,
+  error,
+  librarySongs,
+  setLibrarySongs,
+  formData,
+  setFormData,
+  selectedAlbum,
+  setSelectedAlbum,
+}) => {
+  // Función para agregar canciones a la biblioteca
+  const handleAddToLibrary = (song) => {
+    // Evita duplicados
+    if (
+      !librarySongs.find(
+        (s) => s.title === song.title && s.artist === song.artist
+      )
+    ) {
+      setLibrarySongs([...librarySongs, song]);
+    }
+  };
+
+  return (
+    <HomePage>
+    <h1>Home screen</h1>
+
+      {/* Mandar a Llamar Lista de Artistas con su respectivo ID e imagen */}
+      <ArtistSection>
+        <section className="artist-badges">
+          <h3>Artistas</h3>
+          <div className="artist-badges__container">
+            <div className="artist-badges__track">
+              <ArtistBadges artistList={artistList} />
+              <ArtistBadges artistList={artistList} />
+            </div>
+          </div>
+        </section>
+      </ArtistSection>
+
+
+      <SearchedAlbumSection>
+        {/* -------- Album Search bar by artist ID*/}
+        <SearchBar formData={formData} setFormData={setFormData} />
+
+        {/* INICIA LÓGICA DE RENDERIZADO DE ÁLBUMES */}
+        {error ? (
+          <>
+            <p>{error}</p>
+          </>
+        ) : loading ? (
+          <p>Loading...</p>
+        ) : !albumsList || albumsList.length === 0 ? (
+          <>
+            <p>Artist ID no existe.</p>
+          </>
+        ) : (
+          <SearchedAlbums
+            albumsList={albumsList}
+            selectedAlbum={selectedAlbum}
+            setSelectedAlbum={setSelectedAlbum}
+          />
+        )}
+        {/* TERMINA LOGICA DE RENDERIZADO DE ÁLBUMES */}
+      </SearchedAlbumSection>
+
+      
+
+      {/* LIBRERÍA DE ÁLBUMES SELECCIONADOS */}
+      <LibrarySection>
+        <Library></Library>
+      </LibrarySection>
+
+    </HomePage>
+  );
+};
+
+export default Home;
