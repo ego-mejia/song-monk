@@ -8,10 +8,9 @@ import SongDetails from "./Pages/SongDetails";
 import useFetchAlbumsByArtist from "./hooks/useFetchAlbumsByArtist";
 import useFetchAlbumDetails from "./hooks/useFetchAlbumDetails";
 import ArtistInformation from "./Pages/ArtistInformation";
-import Documentation from "./Pages/Documentation";
+// import Documentation from "./Pages/Documentation";
 
 // Styles
-import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
   // * Manejar los datos en el componente padre
@@ -43,7 +42,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <GlobalStyle />
       <Header />
       <Routes>
         <Route

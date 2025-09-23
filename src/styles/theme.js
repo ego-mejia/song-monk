@@ -1,43 +1,30 @@
 //* Base de colores para el tema claro
 const lightColors = {
-  primary: "#007bff",
-  secondary: "#6c757d",
-  text: "#333333",
+  primary: "#FFB623",
+  secondary: "#E55117",
+  title: "#000000",
+  text: "#909090",
   background: "#f8f9fa",
-  border: "#dee2e6",
+  // border: "#dee2e6",
 };
 
-//* Base de colores para el tema oscuro
-const darkColors = {
-  primary: "#87ceeb", // Un azul más claro para el modo oscuro
-  secondary: "#adb5bd",
-  text: "#f8f9fa",
-  background: "#212529",
-  border: "#495057",
-};
 
 //* Propiedades compartidas (no cambian entre temas)
 const commonProps = {
   fonts: {
-    main: "Arial, sans-serif",
-    heading: "Georgia, serif",
+    main: "'Roboto', sans-serif",
+    heading: "'Bangers', system-ui",
   },
   spacing: {
     small: "8px",
     medium: "16px",
     large: "24px",
   },
-  borderRadius: "4px",
+  borderRadius: "10px",
 };
 
 //? Objeto del tema claro
-export const lightTheme = {
+export const theme = {
   colors: lightColors,
-  ...commonProps,
-};
-
-//? Objeto del tema oscuro
-export const darkTheme = {
-  colors: darkColors,
   ...commonProps,
 };
