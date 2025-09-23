@@ -21,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  //Estilos para todos los encabezados
+  h1, h2, h3, h4, h5, h6{
+    font-family: ${(props) => props.theme.fonts.heading};
+  }
 `;
 
 export default GlobalStyle;
