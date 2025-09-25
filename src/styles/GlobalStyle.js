@@ -27,9 +27,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.fonts.heading};
   }
 
-  /* h1{
+  h1{
     font-size: 50px;
-  } */
+  }
+
 `;
 
 export default GlobalStyle;

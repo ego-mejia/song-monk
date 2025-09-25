@@ -7,7 +7,7 @@ export const HomePage = styled.section`
   flex-direction: row;
 
   /* align-items: center; */
-  justify-content: center;
+  justify-content: space-between;
   max-width: 1200px;
   width: 100%;
   margin-left: auto;

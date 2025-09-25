@@ -8,7 +8,6 @@ const lightColors = {
   // border: "#dee2e6",
 };
 
-
 //* Propiedades compartidas (no cambian entre temas)
 const commonProps = {
   fonts: {

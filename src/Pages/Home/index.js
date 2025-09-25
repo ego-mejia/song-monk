@@ -46,18 +46,16 @@ const Home = ({
     <HomePage>
       {/* Mandar a Llamar Lista de Artistas con su respectivo ID e imagen */}
       <ArtistSection>
-        <section className="artist-badges">
+        <section>
           <h1>Artists</h1>
-          <div className="artist-badges__container">
-            <div className="artist-badges__track">
-              <ArtistBadges artistList={artistList} />
-              <ArtistBadges artistList={artistList} />
-            </div>
-          </div>
+          <ArtistBadges artistList={artistList} />
+          <ArtistBadges artistList={artistList} />
         </section>
       </ArtistSection>
 
       <SearchedAlbumSection>
+        <h1>Albums</h1>
+
         {/* -------- Album Search bar by artist ID*/}
         <SearchBar formData={formData} setFormData={setFormData} />
 
@@ -84,6 +82,7 @@ const Home = ({
 
       {/* LIBRERÍA DE ÁLBUMES SELECCIONADOS */}
       <LibrarySection>
+        <h1>Library</h1>
         <Library></Library>
       </LibrarySection>
     </HomePage>

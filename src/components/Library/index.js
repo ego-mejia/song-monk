@@ -18,7 +18,6 @@ const Library = () => {
     // year: selectedAlbum.intYearReleased,
     // artist: selectedAlbum.strArtist,
     <>
-      <h2>Library</h2>
       {albums.map((album) => (
         <div>
           <h3>{album.name}</h3>

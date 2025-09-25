@@ -7,9 +7,8 @@ import { store } from "./redux/store";
 
 // Styles
 import { ThemeProvider } from "styled-components";
-import { theme } from "./styles/theme"
+import { theme } from "./styles/theme";
 import GlobalStyle from "./styles/GlobalStyle";
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,7 +19,6 @@ root.render(
           <GlobalStyle />
           <App />
         </ThemeProvider>
-
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
