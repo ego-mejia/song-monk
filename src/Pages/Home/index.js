@@ -44,12 +44,10 @@ const Home = ({
 
   return (
     <HomePage>
-    <h1>Home screen</h1>
-
       {/* Mandar a Llamar Lista de Artistas con su respectivo ID e imagen */}
       <ArtistSection>
         <section className="artist-badges">
-          <h3>Artistas</h3>
+          <h1>Artists</h1>
           <div className="artist-badges__container">
             <div className="artist-badges__track">
               <ArtistBadges artistList={artistList} />
@@ -58,7 +56,6 @@ const Home = ({
           </div>
         </section>
       </ArtistSection>
-
 
       <SearchedAlbumSection>
         {/* -------- Album Search bar by artist ID*/}
@@ -85,13 +82,10 @@ const Home = ({
         {/* TERMINA LOGICA DE RENDERIZADO DE ÁLBUMES */}
       </SearchedAlbumSection>
 
-      
-
       {/* LIBRERÍA DE ÁLBUMES SELECCIONADOS */}
       <LibrarySection>
         <Library></Library>
       </LibrarySection>
-
     </HomePage>
   );
 };
