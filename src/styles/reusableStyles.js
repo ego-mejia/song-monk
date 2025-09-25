@@ -21,4 +21,5 @@ export const ActionButton = styled.button`
   font-size: 20px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 `;

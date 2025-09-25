@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    
+    font-family: ${(props) => props.theme.fonts.main};
+
     // Si quieres quitar la decoración del texto y los bordes para los elementos específicos
     // puedes descomentar estas líneas
     // text-decoration: none;
@@ -30,6 +31,12 @@ const GlobalStyle = createGlobalStyle`
   h1{
     font-size: 50px;
   }
+  h2{
+    font-size: 30px;
+    }
+  // p{     
+  //   font-size: 30px;
+  // }
 
 `;
 

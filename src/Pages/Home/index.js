@@ -56,7 +56,7 @@ const Home = ({
           <ArtistBadges artistList={artistList} />
         </section> */}
         <div>
-          <h1>Información de Artistas</h1>
+          <h1>Artistas</h1>
           {/* <div className="topArtists"> */}
           <div className="topArtist">
             {artistList.map(({ name, img, id }) => (
