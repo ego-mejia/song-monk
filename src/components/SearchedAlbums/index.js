@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addAlbum } from "../../redux/libraryActions";
+
+// Style
+import { AlbumCard } from "./style"
+import { ActionButton } from "../../styles/reusableStyles";
+
+
 /*
 image: strAlbum3DThumb
 year: intYearReleased
@@ -39,8 +45,8 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
             index
           ) =>
             strAlbum3DThumb && (
-              <div
-                className="albums__card"
+              <AlbumCard
+                className="album__card"
                 key={index}
                 onClick={() =>
                   handleCardClick({
@@ -48,24 +54,24 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
                   })
                 }
               >
-                <img src={strAlbum3DThumb} alt="Album image" width={"200px"} />
+                <img src={strAlbum3DThumb} alt="Album image" />
                 <p>{intYearReleased}</p>
                 <p>{strAlbum}</p>
                 <p>{idAlbum}</p>
                 <p>{strArtist}</p>
-                <button
+                
+                <ActionButton
                   onClick={() => {
-                    handleAddAlbum({
-                      intYearReleased,
-                      strAlbum,
-                      idAlbum,
-                      strArtist,
-                    });
-                  }}
-                >
-                  Agregar a mi biblioteca
-                </button>
-              </div>
+                      handleAddAlbum({
+                        intYearReleased,
+                        strAlbum,
+                        idAlbum,
+                        strArtist,
+                      });
+                    }}
+                >Agregar a mi biblioteca 2</ActionButton>
+                
+              </AlbumCard>
             )
         )}
       </section>

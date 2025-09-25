@@ -3,14 +3,17 @@ import { useState } from "react";
 import Library from "../../components/Library";
 import SearchResults from "../../components/SearchResults";
 import SearchBar from "../../components/SearchBar";
-// Lista de Artistas
-import { artistList } from "../../data/artistData";
-import ArtistBadges from "../../components/ArtistBadges";
+
 import SearchedAlbums from "../../components/SearchedAlbums";
 // RENDERIZAR CANCIONES DE ALBUM SELECCIONADO
 // import FetchedSongs from "./FetchedSongs";
 
+// Aristas
+import { artistList } from "../../data/artistData";
+import ArtistCard from "../../components/ArtistCard";
+
 // Style
+
 import {
   HomePage,
   ArtistSection,
@@ -46,11 +49,23 @@ const Home = ({
     <HomePage>
       {/* Mandar a Llamar Lista de Artistas con su respectivo ID e imagen */}
       <ArtistSection>
-        <section>
+
+        {/* <section>
           <h1>Artists</h1>
           <ArtistBadges artistList={artistList} />
           <ArtistBadges artistList={artistList} />
-        </section>
+        </section> */}
+        <div>
+          <h1>Información de Artistas</h1>
+          {/* <div className="topArtists"> */}
+          <div className="topArtist">
+            {artistList.map(({ name, img, id }) => (
+              <ArtistCard key={id} name={name} img={img} id={id} />
+            ))}
+            {/* </div> */}
+          </div>
+        </div>
+
       </ArtistSection>
 
       <SearchedAlbumSection>
