@@ -5,7 +5,7 @@ export const AlbumCard = styled.div`
     max-width: 350px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
     img{
         width: 100%;
@@ -25,7 +25,7 @@ export const AlbumCard = styled.div`
 export const AlbumCardInformation = styled.div`
     display:flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 `;
 export const AlbumCardTitles = styled.div`
     display: flex;

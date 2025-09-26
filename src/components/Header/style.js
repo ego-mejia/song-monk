@@ -8,6 +8,6 @@ export const Navbar = styled.header`
     
     img{
         // width: 100%;
-        height: 100px;
+        height: 90px;
     }
 `; 

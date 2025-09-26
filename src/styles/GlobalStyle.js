@@ -28,15 +28,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.fonts.heading};
   }
 
-  h1{
-    font-size: 50px;
+  h1 {
+    font-size: clamp(24px, 5vw, 50px);
   }
-  h2{
-    font-size: 30px;
-    }
-  // p{     
-  //   font-size: 30px;
-  // }
+
+  h2 {
+    font-size: clamp(18px, 3vw, 30px);
+  }
+
+  p {
+    font-size: clamp(14px, 2vw, 20px);
+}
 
 `;
 
