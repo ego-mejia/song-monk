@@ -3,21 +3,16 @@ import React from "react";
 import logo from "../../assets/logo--large.svg";
 import { Link } from "react-router-dom";
 
+// Style
+import { Navbar } from "./style"
+
 const Header = () => {
   return (
-    <header className="navbar">
-      {/* <a className="navbar__img">
-        <img src={logo} alt="" />
-      </a> */}
+    <Navbar>
       <Link to="/" className="navbar__img">
         <img src={logo} alt="Logo" />
       </Link>
-      <div className="navbar__links">
-        <Link to="/">Inicio</Link>
-        <Link to="/artists">Artistas</Link>
-        {/* <Link to="/documentation">Documentación</Link> */}
-      </div>
-    </header>
+    </Navbar>
   );
 };
 
