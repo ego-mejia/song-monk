@@ -17,7 +17,12 @@ export const LibraryAlbumTitles = styled.div`
 export const RemoveAlbumButton = styled.button`
   ${buttonBase}
   ${flexCenter}
-  background-color: red;
-  width: 36px;
-  height: 36px;
+  background-color: ${(props) => props.theme.colors.secondary};
+  width: 37px;
+  height: 37px;
+
+  /* Posicion en la esquina superior derecha del album */
+  position: absolute;
+  top: 0;
+  right: 0;
 `;

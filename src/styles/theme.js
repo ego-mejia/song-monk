@@ -1,7 +1,8 @@
 //* Base de colores para el tema claro
 const lightColors = {
   primary: "#FFB623",
-  secondary: "#E55117",
+  secondary: "#FF4023",
+  // secondary: "#E55117",
   title: "#000000",
   text: "#909090",
   background: "#f8f9fa",

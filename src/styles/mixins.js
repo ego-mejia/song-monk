@@ -8,6 +8,8 @@ export const buttonBase = css`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  font-size: 20px;
 `;
 
 // Mixin para centrar con flexbox
@@ -15,4 +17,5 @@ export const flexCenter = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;
