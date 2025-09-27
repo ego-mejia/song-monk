@@ -3,12 +3,8 @@ import { useDispatch } from "react-redux";
 import { addAlbum } from "../../redux/libraryActions";
 
 // Style
-import { AlbumCard,
-  AlbumCardInformation,
-  AlbumCardTitles
- } from "./style"
+import { AlbumCard, AlbumCardInformation, AlbumCardTitles } from "./style";
 import { ActionButton } from "../../styles/reusableStyles";
-
 
 /*
 image: strAlbum3DThumb
@@ -27,6 +23,7 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
       name: selectedAlbum.strAlbum,
       year: selectedAlbum.intYearReleased,
       artist: selectedAlbum.strArtist,
+      image: selectedAlbum.strAlbum3DThumb,
     };
     dispatch(addAlbum(album));
   };
@@ -64,20 +61,22 @@ const SearchedAlbums = ({ albumsList, selectedAlbum, setSelectedAlbum }) => {
                     <h2>{strArtist}</h2>
                     <h2>{intYearReleased}</h2>
                   </AlbumCardTitles>
-                    <p>ID: {idAlbum}</p>
+                  <p>ID: {idAlbum}</p>
                 </AlbumCardInformation>
-                
+
                 <ActionButton
                   onClick={() => {
-                      handleAddAlbum({
-                        intYearReleased,
-                        strAlbum,
-                        idAlbum,
-                        strArtist,
-                      });
-                    }}
-                >Add to Library</ActionButton>
-                
+                    handleAddAlbum({
+                      intYearReleased,
+                      strAlbum,
+                      idAlbum,
+                      strArtist,
+                      strAlbum3DThumb,
+                    });
+                  }}
+                >
+                  Add to Library
+                </ActionButton>
               </AlbumCard>
             )
         )}

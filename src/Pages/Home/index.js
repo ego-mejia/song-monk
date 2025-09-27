@@ -49,7 +49,6 @@ const Home = ({
     <HomePage>
       {/* Mandar a Llamar Lista de Artistas con su respectivo ID e imagen */}
       <ArtistSection>
-
         {/* <section>
           <h1>Artists</h1>
           <ArtistBadges artistList={artistList} />
@@ -65,14 +64,13 @@ const Home = ({
             {/* </div> */}
           </div>
         </div>
-
       </ArtistSection>
 
       <SearchedAlbumSection>
         <h1>Albums</h1>
 
         {/* -------- Album Search bar by artist ID*/}
-        {/* <SearchBar formData={formData} setFormData={setFormData} /> */}
+        <SearchBar formData={formData} setFormData={setFormData} />
 
         {/* INICIA LÓGICA DE RENDERIZADO DE ÁLBUMES */}
         {error ? (

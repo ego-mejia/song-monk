@@ -20,6 +20,7 @@ const Library = () => {
     <>
       {albums.map((album) => (
         <div>
+          <img src={album.image} alt="Album image" />
           <h3>{album.name}</h3>
           <p>{album.artist}</p>
           <p>{album.year}</p>
