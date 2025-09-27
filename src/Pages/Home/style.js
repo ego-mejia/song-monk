@@ -27,4 +27,5 @@ export const SearchedAlbumSection = styled.section`
 
 export const LibrarySection = styled.section`
   background-color: green;
+  max-width: 200px;
 `;

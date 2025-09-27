@@ -3,6 +3,9 @@ import Song from "../Song";
 import { useDispatch, useSelector } from "react-redux";
 import { removeAlbum } from "../../redux/libraryActions";
 
+// Style
+import { LibraryAlbum, LibraryAlbumTitles, RemoveAlbumButton } from "./style";
+
 // Componente que renderiza las canciones en la biblioteca del usuario
 const Library = () => {
   const albums = useSelector((state) => state.albums); //? A qué objeto se debe acceder despies de state.album.?????
@@ -19,19 +22,22 @@ const Library = () => {
     // artist: selectedAlbum.strArtist,
     <>
       {albums.map((album) => (
-        <div>
+        <LibraryAlbum>
           <img src={album.image} alt="Album image" />
-          <h3>{album.name}</h3>
-          <p>{album.artist}</p>
-          <p>{album.year}</p>
-          <button
+          <h2>{album.name}</h2>
+          <LibraryAlbumTitles>
+            <h3>{album.artist}</h3>
+            <h3>{album.year}</h3>
+          </LibraryAlbumTitles>
+
+          <RemoveAlbumButton
             onClick={() => {
               handleDeleteAlbum(album.id);
             }}
           >
-            Eliminar Album
-          </button>
-        </div>
+            <h2>X</h2>
+          </RemoveAlbumButton>
+        </LibraryAlbum>
       ))}
     </>
   );
