@@ -4,7 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeAlbum } from "../../redux/libraryActions";
 
 // Style
-import { LibraryAlbum, LibraryAlbumTitles, RemoveAlbumButton } from "./style";
+import {
+  LibraryAlbum,
+  Titles,
+  Content,
+  ImageContainer,
+  RemoveAlbumButton,
+} from "./style";
 
 // Componente que renderiza las canciones en la biblioteca del usuario
 const Library = () => {
@@ -23,20 +29,19 @@ const Library = () => {
     <>
       {albums.map((album) => (
         <LibraryAlbum>
-          <img src={album.image} alt="Album image" />
-          <h2>{album.name}</h2>
-          <LibraryAlbumTitles>
-            <h3>{album.artist}</h3>
-            <h3>{album.year}</h3>
-          </LibraryAlbumTitles>
-
-          <RemoveAlbumButton
-            onClick={() => {
-              handleDeleteAlbum(album.id);
-            }}
-          >
-            <h2>X</h2>
-          </RemoveAlbumButton>
+          <ImageContainer>
+            <img src={album.image} alt="Album image" />
+            <RemoveAlbumButton onClick={() => handleDeleteAlbum(album.id)}>
+              <h2>X</h2>
+            </RemoveAlbumButton>
+          </ImageContainer>
+          <Content>
+            <h2>{album.name}</h2>
+            <Titles>
+              <h3>{album.artist}</h3>
+              <h3>{album.year}</h3>
+            </Titles>
+          </Content>
         </LibraryAlbum>
       ))}
     </>
