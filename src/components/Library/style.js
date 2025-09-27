@@ -15,4 +15,13 @@ export const LibraryAlbumTitles = styled.div`
 
 export const RemoveAlbumButton = styled.button`
   background-color: red;
+  width: 36px;
+  height: 36px;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
 `;

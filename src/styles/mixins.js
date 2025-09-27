@@ -2,8 +2,17 @@
 
 import { css } from "styled-components";
 
+// Mixin para estilos comunes de botones
+export const buttonBase = css`
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+// Mixin para centrar con flexbox
 export const flexCenter = css`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;

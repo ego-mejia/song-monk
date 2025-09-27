@@ -1,6 +1,7 @@
 // * Componentes reutilizables como botones, tarjetas, etc.
 
 import styled from "styled-components";
+import { buttonBase, flexCenter } from "./mixins";
 
 export const CardWrapper = styled.div`
   background-color: white;
@@ -11,15 +12,10 @@ export const CardWrapper = styled.div`
 `;
 
 export const ActionButton = styled.button`
-  // max-width: 250px;
+  ${buttonBase}
   width: 100%;
   height: 52px;
-
   background-color: ${(props) => props.theme.colors.primary};
-  color: white;
   font-family: ${(props) => props.theme.fonts.heading};
   font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 `;
