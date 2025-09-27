@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { flexCenter } from "../../styles/mixins";
 
 export const HomePage = styled.section`
   background-color: magenta;
@@ -15,21 +16,28 @@ export const HomePage = styled.section`
 `;
 export const ArtistSection = styled.section`
   background-color: red;
+
+  ${flexCenter("column")}
+  justify-content: start;
+
+  width: 100%;
+  max-width: 350px;
+  gap: 20px;
 `;
 
 export const SearchedAlbumSection = styled.section`
   background-color: cyan;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${flexCenter("column")}
+  justify-content: start;
 `;
 
 export const LibrarySection = styled.section`
   background-color: green;
-  width: 100%;
-  max-width: 350px;
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  max-width: 350px;
   gap: 20px;
 `;
