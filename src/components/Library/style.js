@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { buttonBase, flexCenter } from "../../styles/mixins";
 
 export const LibraryAlbum = styled.div`
   background-color: yellow;
@@ -14,14 +15,9 @@ export const LibraryAlbumTitles = styled.div`
 `;
 
 export const RemoveAlbumButton = styled.button`
+  ${buttonBase}
+  ${flexCenter}
   background-color: red;
   width: 36px;
   height: 36px;
-  color: white;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  cursor: pointer;
 `;
