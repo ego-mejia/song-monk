@@ -49,21 +49,22 @@ const Home = ({
   return (
     <HomePage>
       {/* Mandar a Llamar Lista de Artistas con su respectivo ID e imagen */}
-      <ArtistSection>
-        {/* <section>
-          <h1>Artists</h1>
-          <ArtistBadges artistList={artistList} />
-          <ArtistBadges artistList={artistList} />
-        </section> */}
-        
+      <ArtistSection>   
           <h1>Artistas</h1>
-          {/* <div className="topArtists"> */}
-          <ArtistsList>
-            {artistList.map(({ name, img, id }) => (
-              <ArtistCard key={id} name={name} img={img} id={id} setFormData={setFormData}/>
-            ))}
-            {/* </div> */}
-          </ArtistsList>
+        <ArtistsList>
+          {artistList.map(({ name, img, id }) => 
+            img && (
+              <ArtistCard
+                key={id}
+                name={name}
+                img={img}
+                id={id}
+                setFormData={setFormData}
+              />
+            )
+          )}
+        </ArtistsList>
+
         
       </ArtistSection>
 

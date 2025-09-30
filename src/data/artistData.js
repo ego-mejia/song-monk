@@ -7,7 +7,8 @@ export const artistList = [
   {
     name: "Adele",
     id: "111493",
-    img: "https://www.theaudiodb.com/images/media/Artist/thumb/ey8rrw1729563469.jpg/small",
+    img: "https://r2.theaudiodb.com/images/media/artist/thumb/ey8rrw1729563469.jpg/small",
+    // img: "https://www.theaudiodb.com/images/media/Artist/thumb/ey8rrw1729563469.jpg/small",
   },
   {
     name: "Coldplay",
@@ -167,7 +168,7 @@ export const artistList = [
   {
     name: "Taylor Swift",
     id: "111352",
-    img: "https://www.theaudiodb.com/images/media/Artist/thumb/buhg671744753705.jpg/small",
+    img: "https://r2.theaudiodb.com/images/media/artist/thumb/k60sy91751894007.jpg",
   },
   {
     name: "Bruno Mars",
@@ -247,7 +248,7 @@ export const artistList = [
   {
     name: "Beyoncé",
     id: "114364",
-    img: "https://www.theaudiodb.com/images/media/Artist/thumb/1347b11737198631.jpg/small",
+    img: "https://r2.theaudiodb.com/images/media/Artist/thumb/1347b11737198631.jpg/small",
   },
   {
     name: "Peter Gabriel",
@@ -272,7 +273,7 @@ export const artistList = [
   {
     name: "Elvis Presley",
     id: "111248",
-    img: "https://www.theaudiodb.com/images/media/Artist/thumb/t4ledf1741080085.jpg/small",
+    img: "https://r2.theaudiodb.com/images/media/Artist/thumb/t4ledf1741080085.jpg/small",
   },
   {
     name: "Supertramp",
@@ -327,7 +328,7 @@ export const artistList = [
   {
     name: "Limp Bizkit",
     id: "111856",
-    img: "https://www.theaudiodb.com/images/media/Artist/thumb/kpxru11742226253.jpg/small",
+    img: "https://r2.theaudiodb.com/images/media/Artist/thumb/kpxru11742226253.jpg/small",
   },
   {
     name: "The Cure",
