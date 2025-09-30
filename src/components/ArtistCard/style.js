@@ -14,6 +14,11 @@ export const ImageContainer = styled.div`
     border-radius: 10px;
     cursor: pointer;
 
+    &:hover {
+        border: 1px solid ${(props) => props.theme.colors.secondary};
+        box-shadow: 0 0 10px ${(props) => props.theme.colors.secondary}; 
+    }
+
     img{
           width: 100%;
             height: 100%;
