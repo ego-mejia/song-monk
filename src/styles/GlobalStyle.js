@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: clamp(24px, 5vw, 50px);
+    font-size: clamp(24px, 5vw, 40px);
   }
 
   h2 {
