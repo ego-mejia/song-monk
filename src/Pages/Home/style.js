@@ -22,11 +22,17 @@ export const ArtistSection = styled.section`
 
   width: 100%;
   max-width: 350px;
-  gap: 20px;
 
   height: 89.5vh; /* ocupa exactamente el alto de la pantalla */
   overflow-y: auto; /* permite scroll interno si el contenido se desborda */
 `;
+
+export const ArtistsList = styled.section`
+  ${flexCenter("column")}
+  gap: 20px;
+  background-color: purple;
+`;
+
 
 export const SearchedAlbumSection = styled.section`
   background-color: cyan;

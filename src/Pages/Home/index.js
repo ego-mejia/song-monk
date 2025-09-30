@@ -19,6 +19,7 @@ import {
   ArtistSection,
   SearchedAlbumSection,
   LibrarySection,
+  ArtistsList
 } from "./style";
 
 // * Renderizar componente padre
@@ -54,16 +55,16 @@ const Home = ({
           <ArtistBadges artistList={artistList} />
           <ArtistBadges artistList={artistList} />
         </section> */}
-        <div>
+        
           <h1>Artistas</h1>
           {/* <div className="topArtists"> */}
-          <div className="topArtist">
+          <ArtistsList>
             {artistList.map(({ name, img, id }) => (
               <ArtistCard key={id} name={name} img={img} id={id} />
             ))}
             {/* </div> */}
-          </div>
-        </div>
+          </ArtistsList>
+        
       </ArtistSection>
 
       <SearchedAlbumSection>
