@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { debugBackground } from "../../styles/mixins";
 
 export const Navbar = styled.header`
-  display: flex;
+  ${debugBackground("blue")};
+display: flex;
   justify-content: center;
-  background-color: blue;
 
   img {
     // width: 100%;

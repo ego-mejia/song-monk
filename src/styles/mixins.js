@@ -32,3 +32,13 @@ export const flexCenter = (direction = "row") => css`
   position: relative;
   flex-direction: ${direction};
 `;
+
+
+
+
+// Debug
+// 🔹 Mixin que acepta cualquier color CSS (default = red)
+export const debugBackground = (colorName = "red") => css`
+  background-color: ${(props) =>
+    props.theme.debug ? colorName : "transparent"};
+`;

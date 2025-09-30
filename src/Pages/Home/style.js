@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { flexCenter } from "../../styles/mixins";
+import { flexCenter, debugBackground } from "../../styles/mixins";
 
 export const HomePage = styled.section`
-  background-color: magenta;
+  ${debugBackground("magenta")};
 
   display: flex;
   flex-direction: row;
@@ -15,9 +15,9 @@ export const HomePage = styled.section`
   margin-right: auto;
 `;
 export const ArtistSection = styled.section`
-  background-color: red;
+  ${debugBackground("red")};
+  ${flexCenter("column")};
 
-  ${flexCenter("column")}
   justify-content: start;
 
   width: 100%;
@@ -28,21 +28,22 @@ export const ArtistSection = styled.section`
 `;
 
 export const ArtistsList = styled.section`
-  ${flexCenter("column")}
+  ${debugBackground("purple")};
+  ${flexCenter("column")};
   gap: 20px;
-  background-color: purple;
 `;
 
 
 export const SearchedAlbumSection = styled.section`
-  background-color: cyan;
+  ${debugBackground("cyan")};
+  ${flexCenter("column")};
 
-  ${flexCenter("column")}
   justify-content: start;
 `;
 
 export const LibrarySection = styled.section`
-  background-color: green;
+  ${debugBackground("green")};
+
   display: flex;
   flex-direction: column;
 

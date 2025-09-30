@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { buttonBase, flexCenter } from "../../styles/mixins";
+import { buttonBase, flexCenter, debugBackground } from "../../styles/mixins";
 
 export const LibraryAlbum = styled.div`
-  background-color: yellow;
+  ${debugBackground("Yellow")}
   ${flexCenter("column")}
 
   img {

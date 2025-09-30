@@ -71,7 +71,7 @@ const Home = ({
         <h1>Albums</h1>
 
         {/* -------- Album Search bar by artist ID*/}
-        <SearchBar formData={formData} setFormData={setFormData} />
+        {/* <SearchBar formData={formData} setFormData={setFormData} /> */}
 
         {/* INICIA LÓGICA DE RENDERIZADO DE ÁLBUMES */}
         {error ? (

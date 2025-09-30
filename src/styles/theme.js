@@ -27,4 +27,5 @@ const commonProps = {
 export const theme = {
   colors: lightColors,
   ...commonProps,
+  debug: true,
 };

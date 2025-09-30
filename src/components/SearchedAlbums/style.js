@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { debugBackground } from "../../styles/mixins"
 
 export const AlbumCard = styled.div`
-  background-color: yellow;
+  ${debugBackground("yellow")}
+
   max-width: 350px;
   display: flex;
   flex-direction: column;
