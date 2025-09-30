@@ -60,7 +60,7 @@ const Home = ({
           {/* <div className="topArtists"> */}
           <ArtistsList>
             {artistList.map(({ name, img, id }) => (
-              <ArtistCard key={id} name={name} img={img} id={id} />
+              <ArtistCard key={id} name={name} img={img} id={id} setFormData={setFormData}/>
             ))}
             {/* </div> */}
           </ArtistsList>

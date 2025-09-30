@@ -7,9 +7,13 @@ import { MainContainer,
   ImageContainer
  } from './style'
 
-const ArtistCard = ({ name, img, id }) => {
+const ArtistCard = ({ name, img, id, setFormData }) => {
+  const handleClick = () => {
+    setFormData(id)
+  }
+
   return (
-    <MainContainer>
+    <MainContainer onClick={handleClick}>
       <ImageContainer>
         <img src={img} alt={name}/>
       </ImageContainer>
