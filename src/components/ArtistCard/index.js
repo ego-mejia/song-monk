@@ -19,7 +19,6 @@ const ArtistCard = ({ name, img, id, setFormData }) => {
       </ImageContainer>
       
       <h3>{name}</h3>
-      <p>ID: {id}</p>
     </MainContainer>
   );
 };
