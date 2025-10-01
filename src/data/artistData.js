@@ -1,6 +1,6 @@
 export const artistList = [
   {
-    name: "Pink Floyd",
+    name: "Pink Floyd", 
     id: "111259",
     img: "https://r2.theaudiodb.com/images/media/artist/thumb/uhsmur1713812514.jpg/small",
   },
