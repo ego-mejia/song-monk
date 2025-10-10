@@ -42,27 +42,34 @@ const searchSlice = createSlice({
         // Define un reducer para reiniciar los resultados (resetResults).
         resetResults: (state) => {
             state.results = [];
-        }
+            state.error = '';
+            state.loading = false;
+        },
 
-    }
+    },
+    extraReducers: (builder) => {
+        builder
+        // pending: Cambia loading a true y limpia error.
+        .addCase(fetchSongs.pending, (state) => {
+            state.loading= true;
+            state.error = '';
+        })
+        
+        // fulfilled: Almacena los datos obtenidos en results y cambia loading a false.
+        .addCase(fetchSongs.fulfilled, (state, action) => {
+            state.loading = false;
+            state.results = action.payload;
+        })
+
+
+        // rejected: Almacena el mensaje de error en error.
+        .addCase(fetchSongs.rejected, (state, action) =>{
+            state.loading = false;
+            state.error = action.payload || 'Unknowned error';
+        });
+    },
 });
 
-// Thunk asíncrono:
-
-// Usa createAsyncThunk para definir un thunk llamado fetchSongs.
-
-// En este thunk:
-
-// Realiza una petición al endpoint de búsqueda de álbumes.
-
-// Maneja los estados de carga, éxito y error.
-
-// ExtraReducers:
-
-// Configura extraReducers para manejar los estados del thunk:
-
-// pending: Cambia loading a true y limpia error.
-
-// fulfilled: Almacena los datos obtenidos en results y cambia loading a false.
-
-// rejected: Almacena el mensaje de error en error.
+// Exports
+export const { resetResults } = searchSlice.actions;
+export default searchSlice.reducer;
