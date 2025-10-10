@@ -10,10 +10,17 @@ const initialState = {
 
 }
 
+const searchSlice = createSlice({
+    name: 'search',
+    initialState,
+    reducers: {
+        // Define un reducer para reiniciar los resultados (resetResults).
+        resetResults: (state) => {
+            state.results = [];
+        }
 
-// Reducers:
-
-// Define un reducer para reiniciar los resultados (resetResults).
+    }
+});
 
 // Thunk asíncrono:
 
