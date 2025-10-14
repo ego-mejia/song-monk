@@ -9,13 +9,15 @@ import { MainContainer,
 
 // Redux
 import { useDispatch } from "react-redux";
+import { fetchAlbums } from "../redux/slices/searchSlice";
 
 const ArtistCard = ({ name, img, id /*,setFormData*/ }) => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
     // setFormData(id) Se remplaza por el dispatch
-    
+    dispatch(fetchAlbums(id)); 
+
   }
 
   return (
