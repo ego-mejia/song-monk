@@ -1,15 +1,21 @@
 // src/components/ArtistCard.jsx
 import React from "react";
 
-
 // Style
 import { MainContainer,
   ImageContainer
  } from './style'
 
-const ArtistCard = ({ name, img, id, setFormData }) => {
+
+// Redux
+import { useDispatch } from "react-redux";
+
+const ArtistCard = ({ name, img, id /*,setFormData*/ }) => {
+  const dispatch = useDispatch();
+
   const handleClick = () => {
-    setFormData(id)
+    // setFormData(id) Se remplaza por el dispatch
+    
   }
 
   return (

@@ -13,7 +13,7 @@ const initialState = {
 
 // Asunc Thunk: albums search
 export const fetchAlbums = createAsyncThunk(
-  'search/fetchSongs',
+  'search/fetchAlbums',
   async (idArtist, { rejectWithValue }) => {
     try{
         // Fetch from TheAudioDB API
@@ -50,20 +50,20 @@ const searchSlice = createSlice({
     extraReducers: (builder) => {
         builder
         // pending: Cambia loading a true y limpia error.
-        .addCase(fetchSongs.pending, (state) => {
+        .addCase(fetchAlbums.pending, (state) => {
             state.loading= true;
             state.error = '';
         })
         
         // fulfilled: Almacena los datos obtenidos en results y cambia loading a false.
-        .addCase(fetchSongs.fulfilled, (state, action) => {
+        .addCase(fetchAlbums.fulfilled, (state, action) => {
             state.loading = false;
             state.results = action.payload;
         })
 
 
         // rejected: Almacena el mensaje de error en error.
-        .addCase(fetchSongs.rejected, (state, action) =>{
+        .addCase(fetchAlbums.rejected, (state, action) =>{
             state.loading = false;
             state.error = action.payload || 'Unknowned error';
         });
